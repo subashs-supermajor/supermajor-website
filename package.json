@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build:css": "npx tailwindcss -i assets/css/tailwind-input.css -o assets/css/tailwind.min.css --minify && npx esbuild assets/css/style.css --minify --outfile=assets/css/style.min.css && npx esbuild assets/css/service-editorial.css --minify --outfile=assets/css/service-editorial.min.css",
+    "build:js": "npx esbuild assets/js/main.js --minify --outfile=assets/js/main.min.js && npx esbuild assets/js/service-editorial.js --minify --outfile=assets/js/service-editorial.min.js",
+    "build:inline": "node scripts/inline-css.js",
+    "build": "npm run build:css && npm run build:inline && npm run build:js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^3.4.17"
+  }
+}

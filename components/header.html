@@ -1,0 +1,117 @@
+<style>
+  #site-header .logo-img-white { display: block !important; }
+  #site-header .logo-img-black { display: none !important; }
+  #site-header.nav-theme-light .logo-img-white { display: none !important; }
+  #site-header.nav-theme-light .logo-img-black { display: block !important; }
+  #site-header .nav-brand-center,
+  #site-header .logo-wrap,
+  #site-header .logo-wordmark-img,
+  #site-header .logo-img {
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+  #site-header .nav-menu-btn {
+    border: none !important;
+  }
+</style>
+<header id="site-header" class="navbar fixed left-0 right-0 top-3 sm:top-4 z-[99990] w-full transition-[transform,opacity] duration-300 nav-theme-dark">
+  <div id="nav-bar"
+    class="navbar-inner mx-auto max-w-7xl w-full h-[50px] sm:h-[54px] px-4 sm:px-6 lg:px-8 flex items-center justify-between transition-[transform,opacity] duration-300">
+
+    <!-- Desktop / Tablet Layout -->
+    <div class="hidden md:flex items-center justify-between w-full h-full">
+
+      <!-- Left: SuperMajor Logo (~40px from left viewport edge) -->
+      <a href="./"
+        class="navbar-logo nav-brand-center shrink-0 flex items-center select-none focus:outline-none"
+        aria-label="Super Major Studio">
+        <div class="logo-wrap flex items-center">
+          <!-- Logo mark: swaps automatically with the light/dark nav theme -->
+          <div class="logo-wordmark-img flex items-center leading-none">
+            <img src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/supermajor-white.webp" alt="Super Major"
+              class="logo-img logo-img-white h-7 lg:h-[32px] w-auto" width="541" height="90">
+            <img src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/supermajor-black.webp" alt="Super Major"
+              class="logo-img logo-img-black h-7 lg:h-[32px] w-auto" width="541" height="90">
+          </div>
+        </div>
+      </a>
+
+      <!-- Right: Navigation Menu + CTA Button -->
+      <div class="flex items-center ml-auto">
+        <nav class="navbar-menu flex items-center gap-6 lg:gap-8" aria-label="Primary navigation">
+          <a href="#about" data-nav
+            class="nav-link font-sans text-xs font-semibold tracking-[0.12em] uppercase transition-all duration-200">
+            <span class="nav-roll">
+              <span class="nav-roll-inner">
+                <span class="nav-roll-primary">OUR STORY</span>
+                <span class="nav-roll-secondary" aria-hidden="true">OUR STORY</span>
+              </span>
+            </span>
+          </a>
+          <a href="work" data-nav
+            class="nav-link font-sans text-xs font-semibold tracking-[0.12em] uppercase transition-all duration-200">
+            <span class="nav-roll">
+              <span class="nav-roll-inner">
+                <span class="nav-roll-primary">WORK</span>
+                <span class="nav-roll-secondary" aria-hidden="true">WORK</span>
+              </span>
+            </span>
+          </a>
+          <a href="#services" data-nav
+            class="nav-link font-sans text-xs font-semibold tracking-[0.12em] uppercase transition-all duration-200">
+            <span class="nav-roll">
+              <span class="nav-roll-inner">
+                <span class="nav-roll-primary">SERVICES</span>
+                <span class="nav-roll-secondary" aria-hidden="true">SERVICES</span>
+              </span>
+            </span>
+          </a>
+        </nav>
+
+        <!-- CTA Button (~40px from right viewport edge, compact size) -->
+        <a href="#contact" data-nav
+          class="cta-header-team-up navbar-cta nav-cta-btn ml-5 lg:ml-6 min-h-[36px] h-9 px-4 inline-flex items-center justify-center gap-1.5 text-xs font-bold tracking-[0.08em] uppercase transition-all duration-300 shadow-sm">
+          <span>TEAM UP</span>
+          <iconify-icon icon="solar:arrow-right-up-linear" class="text-xs"></iconify-icon>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Mobile Compact Bar (< md screens) -->
+    <div class="flex md:hidden items-center justify-between w-full h-full">
+      <a href="./" class="navbar-logo nav-brand-center flex items-center select-none focus:outline-none" aria-label="Super Major Studio">
+        <div class="logo-wordmark-img flex items-center leading-none">
+          <img src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/supermajor-white.webp" alt="Super Major" class="logo-img logo-img-white h-7 w-auto" width="541" height="90">
+          <img src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/supermajor-black.webp" alt="Super Major" class="logo-img logo-img-black h-7 w-auto" width="541" height="90">
+        </div>
+      </a>
+
+      <div class="flex items-center gap-2">
+        <button id="menu-toggle" type="button"
+          class="nav-menu-btn inline-flex size-11 min-h-[44px] min-w-[44px] items-center justify-center transition-transform"
+          aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
+          <iconify-icon id="menu-icon" icon="solar:hamburger-menu-linear" class="text-2xl"></iconify-icon>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu"
+    class="hidden w-full border-t border-white/10 bg-ink/95 px-5 py-3 text-cream shadow-2xl backdrop-blur-2xl md:hidden transition-all duration-300">
+    <nav class="grid gap-1 font-display font-bold uppercase tracking-wider text-xs">
+      <a href="#about" data-nav class="mobile-link min-h-[44px] rounded-lg px-4 py-3 flex items-center hover:bg-white/5 transition">OUR STORY</a>
+      <a href="work" data-nav class="mobile-link min-h-[44px] rounded-lg px-4 py-3 flex items-center hover:bg-white/5 transition">WORK</a>
+      <a href="#services" data-nav class="mobile-link min-h-[44px] rounded-lg px-4 py-3 flex items-center hover:bg-white/5 transition">SERVICES</a>
+      <!-- <a href="#studio" data-nav class="mobile-link rounded-lg px-4 py-2.5 hover:bg-white/5 transition">CAREERS</a> -->
+      <a href="#contact" data-nav
+        class="cta-header-mobile-team-up mobile-link min-h-[44px] rounded-lg px-4 py-3 bg-brand text-white flex items-center justify-between mt-1">
+        <span>TEAM UP</span>
+        <iconify-icon icon="solar:arrow-right-up-linear" class="text-base"></iconify-icon>
+      </a>
+    </nav>
+  </div>
+</header>

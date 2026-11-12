@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];var done=false;function gtm(){if(done)return;done=true;
+w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}
+['pointerdown','keydown','touchstart','scroll'].forEach(function(e){w.addEventListener(e,gtm,{once:true,passive:true});});
+w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleCallback(gtm,{timeout:2000});}else{setTimeout(gtm,1);}});
+})(window,document,'script','dataLayer','GTM-M2NKBJFV');</script>
+  <!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitsuba India - Component Visualization System - Super Major</title>
+  <link rel="canonical" href="https://supermajor.in/works/mitsuba-component-visualization">
+  <meta name="description"
+    content="A component visualization and CAD assembly animation system for Mitsuba, showing how engineering products come together part by part, by Super Major.">
+  <meta name="theme-color" content="#F5F1EB">
+  <link rel="icon" type="image/webp" href="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/fav-icon.webp" />
+
+
+  <!-- Open Graph / Link Preview (WhatsApp, Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Super Major">
+  <meta property="og:url" content="https://supermajor.in/works/mitsuba-component-visualization">
+  <meta property="og:title" content="Mitsuba India - Component Visualization System - Super Major">
+  <meta property="og:description"
+    content="A component visualization and CAD assembly animation system for Mitsuba, showing how engineering products come together part by part, by Super Major.">
+  <meta property="og:image" content="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Figure-3.webp">
+  <meta property="og:image:width" content="2464">
+  <meta property="og:image:height" content="1386">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mitsuba India - Component Visualization System - Super Major">
+  <meta name="twitter:description"
+    content="A component visualization and CAD assembly animation system for Mitsuba, showing how engineering products come together part by part, by Super Major.">
+  <meta name="twitter:image" content="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Figure-3.webp">
+  <!-- Preconnected Origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Design System & Layout Stylesheets (Render-blocking to prevent layout shift & FOUC) -->
+  <link rel="stylesheet" href="../assets/css/tailwind.min.css?v=18">
+  <link rel="stylesheet" href="../assets/css/style.min.css?v=76">
+
+  <!-- Icons -->
+  <script defer src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <!-- Animation stack -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  </head>
+
+  <body
+    class="site-page mitsuba-page min-h-screen overflow-x-hidden bg-[#F5F1EB] font-['Inter'] text-[#151210] antialiased selection:bg-[#E8400A] selection:text-white is-loading">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2NKBJFV" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <svg aria-hidden="true" class="absolute size-0 overflow-hidden">
+      <defs>
+        <linearGradient id="shoe-upper" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#393735"></stop>
+          <stop offset="0.48" stop-color="#171615"></stop>
+          <stop offset="1" stop-color="#292725"></stop>
+        </linearGradient>
+        <linearGradient id="shoe-midsole" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#d9d3ca"></stop>
+          <stop offset="0.5" stop-color="#f0ece4"></stop>
+          <stop offset="1" stop-color="#bcb5ab"></stop>
+        </linearGradient>
+        <linearGradient id="shoe-orange" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ef5a22"></stop>
+          <stop offset="1" stop-color="#a92806"></stop>
+        </linearGradient>
+        <pattern id="knit-pattern" width="12" height="8" patternUnits="userSpaceOnUse">
+          <path d="M0 2C3 0 5 0 8 2S13 4 16 2M-4 6C-1 4 1 4 4 6S9 8 12 6" fill="none" stroke="#5b5753"
+            stroke-width="1.2" opacity=".62"></path>
+        </pattern>
+        <filter id="shoe-shadow" x="-30%" y="-50%" width="160%" height="220%">
+          <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#000000" flood-opacity=".38"></feDropShadow>
+        </filter>
+
+        <symbol id="velocity-shoe" viewBox="0 0 720 360">
+          <g filter="url(#shoe-shadow)">
+            <path
+              d="M84 249C105 229 143 219 188 204C226 192 254 155 288 112C304 92 331 79 359 82C399 86 428 117 452 151C475 183 508 204 562 218L632 235C654 241 670 252 674 268C679 285 668 301 645 310C601 327 520 330 424 326L197 317C139 315 93 301 75 280C66 269 70 259 84 249Z"
+              fill="url(#shoe-midsole)" stroke="#8f8981" stroke-width="3"></path>
+            <path
+              d="M88 272C137 291 217 294 307 297L499 303C568 305 624 300 666 284C660 302 647 313 622 321C569 337 477 337 377 333L190 327C129 325 88 311 72 291C66 284 67 276 72 269Z"
+              fill="#171615"></path>
+            <path
+              d="M116 273C155 248 191 226 223 197C251 171 267 133 295 104C314 84 338 72 366 78C404 85 427 119 448 153C470 189 510 217 575 229L629 240C641 243 650 250 653 260C654 269 647 277 631 282C587 296 512 296 427 292L218 285C175 283 142 280 116 273Z"
+              fill="url(#shoe-upper)" stroke="#0d0d0c" stroke-width="4"></path>
+            <path
+              d="M116 273C155 248 191 226 223 197C251 171 267 133 295 104C314 84 338 72 366 78C404 85 427 119 448 153C470 189 510 217 575 229L629 240C641 243 650 250 653 260C654 269 647 277 631 282C587 296 512 296 427 292L218 285C175 283 142 280 116 273Z"
+              fill="url(#knit-pattern)" opacity=".88"></path>
+            <path d="M292 107C309 92 329 85 349 88C329 122 323 163 326 209L244 207C264 180 274 144 292 107Z"
+              fill="#11100f" stroke="#55514d" stroke-width="3"></path>
+            <path d="M359 81C384 83 404 99 422 123L424 166C403 154 381 149 354 151C354 124 355 100 359 81Z"
+              fill="#242220" stroke="#65605b" stroke-width="3"></path>
+            <path d="M422 123C445 155 458 191 495 214C475 224 454 230 430 231C414 203 404 174 404 146Z"
+              fill="url(#shoe-orange)"></path>
+            <path d="M438 214C467 221 503 224 547 226C522 242 493 251 459 254L409 250Z" fill="#0d0d0c" opacity=".76">
+            </path>
+            <path d="M214 214C278 221 350 232 430 251" fill="none" stroke="#77716b" stroke-width="6"
+              stroke-linecap="round"></path>
+            <path d="M231 194L362 218M244 174L371 199M260 152L381 181M280 132L390 164" fill="none" stroke="#b0aaa3"
+              stroke-width="5" stroke-linecap="round"></path>
+            <path d="M219 193L250 167M246 211L277 181M278 218L306 191M312 225L338 198M348 232L371 207" fill="none"
+              stroke="#2b2927" stroke-width="7" stroke-linecap="round"></path>
+            <path d="M104 260C94 247 96 232 110 221C123 211 139 213 149 225L165 247L126 273Z" fill="url(#shoe-orange)">
+            </path>
+            <path d="M568 293L626 288L643 284L633 303L579 314Z" fill="url(#shoe-orange)"></path>
+            <path d="M148 289C251 299 365 302 478 302C527 302 574 299 614 291" fill="none" stroke="#a59e94"
+              stroke-width="3" stroke-dasharray="7 6"></path>
+            <path d="M392 89C402 71 413 51 426 38C436 28 451 32 455 45C460 62 449 83 431 109Z" fill="url(#shoe-orange)">
+            </path>
+            <path d="M397 94C407 73 416 58 426 48C432 42 439 43 441 50C443 60 435 77 424 96Z" fill="#211f1d"></path>
+          </g>
+        </symbol>
+      </defs>
+    </svg>
+
+    <a href="#main-content"
+      class="fixed left-6 top-4 z-[100] -translate-y-24 rounded-full bg-white px-5 py-3 text-sm font-medium shadow-xl transition focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#E8400A]">
+      Skip to content
+    </a>
+
+    <div id="header-placeholder"></div>
+
+    <main id="main-content" data-nav-theme="light">
+      <section class="mitsuba-hero-header bg-[#F5F1EB] px-5 pt-32 pb-3 sm:px-6 sm:pt-36 sm:pb-4">
+        <div class="mx-auto max-w-7xl">
+          <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
+            <div class="lg:col-span-9">
+              <p class="text-sm font-mono font-semibold tracking-[0.12rem] text-[#E8400A]">
+                SELECTED WORK
+              </p>
+              <div class="mt-4 overflow-hidden">
+                <h1 data-title=""
+                  class="translate-y-full font-inter text-5xl font-semibold leading-[0.82] tracking-tight transition duration-700 sm:text-7xl lg:text-8xl">
+                  MITSUBA
+                </h1>
+              </div>
+              <p
+                class="case-scrub-text mt-6 max-w-3xl text-lg leading-8 text-[#67615D] sm:text-xl md:max-w-none md:whitespace-nowrap">
+                Mitsuba India - Component Visualization System
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <figure
+        class="mitsuba-hero-visual relative aspect-[16/9] w-full overflow-hidden sm:aspect-[2/1] lg:aspect-[2.4/1]">
+        <video class="mitsuba-media h-full w-full object-cover" autoplay loop muted playsinline preload="metadata"
+          poster="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Starter%20Motor-poster.webp"
+          aria-label="Mitsuba motorcycle arriving in the city">
+          <source src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Starter%20Motor.webm" type="video/webm">
+        </video>
+      </figure>
+
+      <section class="mitsuba-overview px-5 pt-10 pb-0 sm:px-6 sm:pt-12 sm:pb-0 lg:pt-14 lg:pb-0">
+        <div class="mx-auto max-w-7xl">
+          <p data-reveal=""
+            class="translate-y-6 text-sm font-mono font-semibold tracking-[0.1rem] text-brand opacity-0 transition duration-700">
+            PROJECT OVERVIEW
+          </p>
+
+          <div class="mt-5 grid gap-10 lg:grid-cols-12">
+            <h2 data-reveal=""
+              class="case-scrub-text
+            translate-y-6 font-inter text-4xl font-semibold leading-[0.95] tracking-tight opacity-0 transition duration-700 sm:text-5xl lg:col-span-5">
+              Built piece by piece. Shown the same way.
+            </h2>
+
+            <div data-reveal="" class="translate-y-6 opacity-0 transition duration-700 lg:col-span-7">
+              <p class="case-scrub-text max-w-3xl text-lg leading-8 text-[#67615D]">
+                A component assembly animation for Mitsuba, built to show how a
+                product comes together - part by part, in the order it's actually
+                made. Precision over pace: every step accurate enough to explain
+                the engineering, not just illustrate it.
+              </p>
+
+              <dl class="mt-8 grid gap-5 border-t border-[#E0DAD0] pt-5 sm:grid-cols-3">
+                <div>
+                  <dt class="text-sm font-medium text-[#6E6863]">CLIENT</dt>
+                  <dd class="mt-2 text-sm font-medium">
+                    Mitsuba India
+                  </dd>
+                </div>
+                <div>
+                  <dt class="text-sm font-medium text-[#6E6863]">SECTOR</dt>
+                  <dd class="mt-2 text-sm font-medium">Automotive / Mobility</dd>
+                </div>
+                <div>
+                  <dt class="text-sm font-medium text-[#6E6863]">YEAR</dt>
+                  <dd class="mt-2 text-sm font-medium">2026</dd>
+                </div>
+              </dl>
+
+              <div class="mt-6">
+                <p class="text-sm font-medium text-[#6E6863]">DISCIPLINES</p>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="border border-[#CFC8BE] px-3 py-2 text-xs">
+                    3D &amp; CGI
+                  </span>
+
+                  <span class="border border-[#CFC8BE] px-3 py-2 text-xs">
+                    Animation &amp; Product Films
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section aria-label="Project gallery" class="pt-6 sm:pt-8 lg:pt-10 pb-16 sm:pb-20 lg:pb-24">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="grid gap-6 sm:gap-8 md:grid-cols-2">
+            <figure data-reveal="" class="translate-y-6 opacity-0 transition duration-700">
+              <div class="mitsuba-media-frame aspect-[4/3] overflow-hidden ">
+                <img loading="lazy" class="mitsuba-media h-full w-full object-cover"
+                  src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Figure-1.webp" alt="Mitsuba vehicle door handle detail">
+              </div>
+            </figure>
+            <figure data-reveal="" class="translate-y-6 opacity-0 transition duration-700">
+              <div class="mitsuba-media-frame aspect-[4/3] overflow-hidden">
+                <img loading="lazy" class="mitsuba-media h-full w-full object-cover"
+                  src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Background.webp" alt="Mitsuba vehicle door handle detail">
+              </div>
+            </figure>
+          </div>
+
+          <figure data-reveal="" class="mt-6 sm:mt-8 translate-y-6 opacity-0 transition duration-700">
+            <div class="mitsuba-media-frame relative aspect-video overflow-hidden">
+              <video class="mitsuba-media h-full w-full object-cover" autoplay loop muted playsinline preload="metadata"
+                poster="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Ac%20Generator-poster.webp"
+                aria-label="Mitsuba motorcycle arriving in the city">
+                <source src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Ac%20Generator.webm" type="video/webm">
+              </video>
+            </div>
+          </figure>
+
+        </div>
+        <figure data-reveal=""
+          class="mitsuba-media-frame mitsuba-full-bleed relative mt-8 sm:mt-12 w-full translate-y-6 overflow-hidden opacity-0 transition duration-700">
+          <div class="relative aspect-video">
+            <img loading="lazy" class="mitsuba-media h-full w-full object-cover"
+              src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Figure-2.webp" alt="Mitsuba characters moving through the city">
+          </div>
+        </figure>
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+
+          <div class="mt-8 sm:mt-12 grid gap-6 sm:gap-8 md:grid-cols-2">
+            <figure data-reveal="" class="translate-y-6 opacity-0 transition duration-700">
+              <div class="mitsuba-media-frame aspect-[4/3] overflow-hidden">
+                <img loading="lazy" class="mitsuba-media h-full w-full object-cover"
+                  src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Fan%20motor_tone-Assembled%201.webp"
+                  alt="Mitsuba scooter arriving in the city">
+              </div>
+            </figure>
+            <figure data-reveal="" class="translate-y-6 opacity-0 transition duration-700">
+              <div class="mitsuba-media-frame relative aspect-[4/3] overflow-hidden">
+                <img loading="lazy" class="mitsuba-media h-full w-full object-cover"
+                  src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Background.webp"
+                  alt="Mitsuba vehicle door closing in a cinematic shot">
+              </div>
+            </figure>
+          </div>
+
+          <div class="mt-8 sm:mt-12 grid gap-6 sm:gap-8 md:grid-cols-2">
+            <figure data-reveal="" class="translate-y-6 opacity-0 transition duration-700">
+              <div class="mitsuba-media-frame aspect-[4/3] overflow-hidden">
+                <img loading="lazy" class="mitsuba-media h-full w-full object-cover"
+                  src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Background%20(2).webp" alt="Mitsuba car arriving in the city">
+              </div>
+            </figure>
+            <figure data-reveal="" class="translate-y-6 opacity-0 transition duration-700">
+              <div class="mitsuba-media-frame relative aspect-[4/3] overflow-hidden">
+                <img loading="lazy" class="mitsuba-media h-full w-full object-cover"
+                  src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/power%20window_%20tone_combined%201%20(1).webp"
+                  alt="Mitsuba mascot landing sequence">
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="mt-8 sm:mt-12 grid gap-6 sm:gap-8 md:grid-cols-2">
+            <figure data-reveal="" class="translate-y-6 opacity-0 transition duration-700">
+              <div class="mitsuba-media-frame relative aspect-[4/3] overflow-hidden">
+                <img loading="lazy" class="mitsuba-media h-full w-full object-cover"
+                  src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Background%20(3a).webp" alt="Mitsuba mascot on a city street">
+              </div>
+            </figure>
+            <figure data-reveal="" class="translate-y-6 opacity-0 transition duration-700">
+              <div class="mitsuba-media-frame relative aspect-[4/3] overflow-hidden">
+                <img loading="lazy" class="mitsuba-media h-full w-full object-cover"
+                  src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Background-4a.webp" alt="Mitsuba mascot on a city street">
+              </div>
+            </figure>
+          </div>
+          <figure data-reveal="" class="mt-8 sm:mt-12 translate-y-6 opacity-0 transition duration-700">
+            <div class="mitsuba-media-frame relative aspect-video overflow-hidden">
+              <img loading="lazy" class="mitsuba-media h-full w-full object-cover"
+                src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Background%20(5).webp" alt="Mitsuba vehicle door handle detail">
+            </div>
+          </figure>
+        </div>
+
+      </section>
+
+      <!-- <section class="border-y border-[#E0DAD0] bg-[#EDEBE6] px-5 py-24 sm:px-6 sm:py-28 lg:py-32">
+      <div class="mx-auto max-w-7xl">
+        <p data-reveal=""
+          class="translate-y-6 text-sm font-medium tracking-[0.1rem] text-[#E8400A] opacity-0 transition duration-700">
+          02 / OUTCOME
+        </p>
+
+        <div class="mt-5 grid gap-10 lg:grid-cols-12">
+          <h2 data-reveal=""
+            class="case-scrub-text
+            translate-y-6 font-['Archivo'] text-4xl font-semibold leading-[0.95] tracking-tight opacity-0 transition duration-700 sm:text-5xl lg:col-span-5">
+            A campaign world built for motion.
+          </h2>
+
+          <div data-reveal="" class="translate-y-6 opacity-0 transition duration-700 lg:col-span-7">
+            <p class="case-scrub-text max-w-3xl text-lg leading-8 text-[#67615D]">
+              The finished campaign brings vehicles, character and environment
+              together across hero moments, motion sequences and cinematic
+              city scenes. The result is a flexible visual world built for
+              launch films, social content and brand communication.
+            </p>
+
+            <ul class="mt-10 divide-y divide-[#E0DAD0] border-t border-[#E0DAD0] text-sm font-medium text-[#151210]">
+              <li class="py-3">Vehicle CGI</li>
+              <li class="py-3">Character Animation</li>
+              <li class="py-3">Cinematic City Environment</li>
+              <li class="py-3">Motion Film</li>
+              <li class="py-3">Brand Applications</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+      <section class="mitsuba-next-project px-5 pt-8 sm:pt-10 lg:pt-12 pb-16 sm:pb-20 lg:pb-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="grid gap-10 lg:grid-cols-12">
+            <div class="flex flex-col gap-6 lg:col-span-4 lg:justify-between">
+              <p class="text-sm font-mono font-semibold tracking-[0.1rem] text-brand">NEXT PROJECT</p>
+
+              <div>
+                <h2 class="font-inter text-4xl font-semibold tracking-tight sm:text-5xl">Ruvira Offshore</h2>
+                <p class="mt-4 text-lg leading-8 text-[#67615D]">Built piece by piece. Shown the same way.</p>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                  <span class="border border-[#CFC8BE] px-3 py-2 text-xs">Web &amp; CGI</span>
+                  <span class="border border-[#CFC8BE] px-3 py-2 text-xs">Animation &amp; Product
+                    Films</span>
+                </div>
+
+                <a href="ruvira-offshore"
+                  class="mt-8 inline-flex min-h-11 items-center text-base font-medium transition hover:text-brand focus:outline-none focus:ring-2 focus:ring-brand">
+                  View project →
+                </a>
+              </div>
+            </div>
+
+            <a href="ruvira-offshore"
+              class="group block overflow-hidden bg-[#1B1A19] focus:outline-none focus:ring-2 focus:ring-brand lg:col-span-8"
+              aria-label="View Ruvira Offshore project">
+              <img loading="lazy" src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Figure-3.webp"
+                alt="Ruvira Offshore project component render"
+                class="aspect-video w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-brand px-5 py-16 text-white sm:px-6 sm:py-20">
+        <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-12 lg:items-center">
+          <h2 class="font-['Archivo'] text-4xl font-semibold leading-[0.95] tracking-tight sm:text-5xl lg:col-span-6">
+            Let's scope one product together.
+          </h2>
+
+          <p class="text-lg leading-8 text-white/85 lg:col-span-3">
+            One product, one deliverable - the fastest way to see the pipeline work.
+          </p>
+
+          <div class="lg:col-span-3 lg:text-right">
+            <a href="../#contact"
+              class="cta-mitsuba-components-start-project inline-flex min-h-11 items-center rounded-full bg-[#151210] px-6 py-3.5 text-sm font-medium text-white transition duration-500 hover:bg-[#2A2522] focus:outline-none focus:ring-2 focus:ring-white">
+              Start a project
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+      const title = document.querySelector("[data-title]");
+      if (title && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        requestAnimationFrame(() => requestAnimationFrame(() => title.classList.remove("translate-y-full")));
+      } else if (title) {
+        title.classList.remove("translate-y-full");
+      }
+    </script>
+    <script defer src="../assets/js/main.min.js?v=52"></script>
+    <script defer src="../assets/js/case-study.js?v=2"></script>
+    <script defer src="../assets/js/mitsuba.js?v=4"></script>
+
+  </body>
+
+</html>
