@@ -1,0 +1,85 @@
+# Performance: compression + browser caching (Apache / GoDaddy hosting)
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^works/legal/(.*)$ /legal/$1 [R=301,L]
+  RewriteRule ^services/animation(\.html)?/?$ /services/product-animation [R=301,L]
+  RewriteRule ^product-animation(\.html)?/?$ /services/product-animation [R=301,L]
+  RewriteRule ^3d-product-visualization(\.html)?/?$ /services/3d-product-visualization [R=301,L]
+  RewriteRule ^ar-vr-experiences(\.html)?/?$ /services/ar-vr-experiences [R=301,L]
+  RewriteRule ^website-design(\.html)?/?$ /services/website-design [R=301,L]
+  RewriteRule ^generative-ai(\.html)?/?$ /services/generative-ai [R=301,L]
+
+  # ---- Clean URLs: /work instead of /work.html (same for every page) ----
+  # 1) /index.html and /folder/index.html  ->  / and /folder/   (301 redirect)
+  RewriteCond %{THE_REQUEST} \s/+(.*?)index\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  # 2) /page.html  ->  /page   (301 redirect, keeps ?utm_... parameters).
+  #    /components/*.html are fragments loaded by the scripts, so they stay as they are.
+  RewriteCond %{REQUEST_URI} !^/components/ [NC]
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  # 3) /index  ->  /
+  RewriteRule ^index$ / [R=301,L]
+
+  # 4) /page  is served from page.html (the address bar keeps /page)
+  RewriteCond %{REQUEST_URI} !^/components/ [NC]
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript text/javascript
+  AddOutputFilterByType DEFLATE text/vtt image/x-icon
+  AddOutputFilterByType DEFLATE application/json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/ttf font/otf application/vnd.ms-fontobject
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/webm "access plus 1 year"
+
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|jpg|jpeg|png|webp|gif|svg|ico|woff|woff2|ttf|otf|mp4|webm|glb)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  Header append Vary "Accept-Encoding"
+  Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType video/webm .webm
+  AddType font/woff2 .woff2
+  AddType image/webp .webp
+  AddType model/gltf-binary .glb
+</IfModule>
+

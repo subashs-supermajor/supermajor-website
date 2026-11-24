@@ -1227,7 +1227,13 @@
         });
       }
 
-      var servicePages = { '1': 'services/3d-product-visualization', '2': 'services/product-animation' };
+      var servicePages = {
+        '1': 'services/3d-product-visualization',
+        '2': 'services/product-animation',
+        '3': 'services/ar-vr-experiences',
+        '4': 'services/website-design',
+        '5': 'services/generative-ai'
+      };
       var servicePage = servicePages[row.getAttribute('data-discipline')];
       if (servicePage) {
         row.addEventListener('click', function (e) {

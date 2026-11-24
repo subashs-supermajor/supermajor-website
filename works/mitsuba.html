@@ -17,6 +17,7 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mitsuba India - 25th Anniversary Mascot Film - Super Major</title>
   <link rel="canonical" href="https://supermajor.in/works/mitsuba">
+  <meta name="robots" content="index, follow">
   <meta name="description"
     content="Mitsuba India's 25th anniversary mascot - script, design and 3D character - and the film that reveals it, by Super Major, with UI/UX design for the anniversary web experience.">
   <meta name="theme-color" content="#F5F1EB">
@@ -52,15 +53,6 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
 
   <!-- Icons -->
   <script defer src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-
-  <style>
-    .yt-volume-slider{-webkit-appearance:none;appearance:none;height:3px;border-radius:9999px;outline:none;background:linear-gradient(to right,rgba(255,255,255,.9) 0%,rgba(255,255,255,.3) 0%)}
-    .yt-volume-slider::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:#fff;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.35)}
-    .yt-volume-slider::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;cursor:pointer;border:none;box-shadow:0 1px 3px rgba(0,0,0,.35)}
-    .yt-volume-slider::-webkit-slider-runnable-track{height:3px;border-radius:9999px}
-    .yt-volume-slider::-moz-range-track{height:3px;border-radius:9999px;background:rgba(255,255,255,.3)}
-    .yt-volume-slider::-moz-range-progress{height:3px;border-radius:9999px;background:rgba(255,255,255,.9)}
-  </style>
   <!-- Animation stack -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -503,19 +495,11 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
   </div>
 
   <div id="footer-placeholder"></div>
-
-  <script>
-    const title = document.querySelector("[data-title]");
-    if (title && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      requestAnimationFrame(() => requestAnimationFrame(() => title.classList.remove("translate-y-full")));
-    } else if (title) {
-      title.classList.remove("translate-y-full");
-    }
-  </script>
-  <script defer src="../assets/js/main.min.js?v=52"></script>
+  <script defer src="../assets/js/main.min.js?v=53"></script>
   <script defer src="../assets/js/case-study.js?v=2"></script>
   <script defer src="../assets/js/mitsuba.js?v=4"></script>
 
+  <script defer src="../assets/js/works-anim.js"></script>
 </body>
 
 </html>

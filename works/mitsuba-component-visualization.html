@@ -17,6 +17,7 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mitsuba India - Component Visualization System - Super Major</title>
   <link rel="canonical" href="https://supermajor.in/works/mitsuba-component-visualization">
+  <meta name="robots" content="index, follow">
   <meta name="description"
     content="A component visualization and CAD assembly animation system for Mitsuba, showing how engineering products come together part by part, by Super Major.">
   <meta name="theme-color" content="#F5F1EB">
@@ -413,19 +414,11 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
     </main>
 
     <div id="footer-placeholder"></div>
-
-    <script>
-      const title = document.querySelector("[data-title]");
-      if (title && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        requestAnimationFrame(() => requestAnimationFrame(() => title.classList.remove("translate-y-full")));
-      } else if (title) {
-        title.classList.remove("translate-y-full");
-      }
-    </script>
-    <script defer src="../assets/js/main.min.js?v=52"></script>
+    <script defer src="../assets/js/main.min.js?v=53"></script>
     <script defer src="../assets/js/case-study.js?v=2"></script>
     <script defer src="../assets/js/mitsuba.js?v=4"></script>
 
-  </body>
+    <script defer src="../assets/js/works-anim.js"></script>
+</body>
 
 </html>

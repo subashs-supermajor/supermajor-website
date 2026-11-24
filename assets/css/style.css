@@ -415,8 +415,8 @@ html.js-anim [data-reveal].revealed {
 }
 
 .pl-status-dot {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #E8400A;
   box-shadow: 0 0 10px #E8400A;
@@ -3690,3 +3690,591 @@ body {
   border-color: rgba(201, 55, 8, 0.25);
   box-shadow: 0 12px 28px -8px rgba(21, 18, 16, 0.08);
 }
+
+/* ===== 3D Product Animation page (.an) ===== */
+/* =====================================================================
+       ANIMATION SERVICE PAGE
+       Layout is Tailwind utilities; this block only sets the page rhythm.
+       ===================================================================== */
+
+    /* One vertical rhythm for every section. !important: the shared
+       .site-page section rule in style.css is more specific than utilities. */
+    .an main>section {
+      padding-block: clamp(5rem, 9vw, 8rem) !important;
+    }
+
+    /* Hero sizes itself like work.html's hero (min-height + inner padding) */
+    .an main>#service-hero {
+      padding-block: 0 !important;
+    }
+
+    /* iOS Safari can let wide content push the page sideways */
+    .an main {
+      overflow-x: clip;
+    }
+
+    /* Industries slider: hide the scrollbar, keep swipe + snap */
+    .industry-track {
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      cursor: grab;
+    }
+
+    .industry-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .industry-track.is-dragging {
+      cursor: grabbing;
+      scroll-snap-type: none;
+      user-select: none;
+    }
+
+    /* Placeholder colour for the required "What you have" select */
+    #film-form select:invalid {
+      color: rgba(255, 255, 255, .4);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /* Form dropdown select options styling on dark theme */
+    #film-form select {
+      color-scheme: dark;
+    }
+
+    #film-form select option {
+      background-color: #151210;
+      color: #ffffff;
+    }
+
+    /* ---------- Page-only header & footer (all scoped to .an-*) ---------- */
+    .an-header .nav-menu-btn {
+      border: none !important;
+    }
+
+    .an-mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    }
+
+    .an-display {
+      font-family: 'Archivo', sans-serif;
+      font-variation-settings: 'wdth' 125;
+      font-stretch: 125%;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    .an-footer {
+      background-color: #000000;
+    }
+
+    .an-footer .an-flink {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      transition: color .2s ease;
+    }
+
+    .an-footer .an-flink:hover,
+    .an-footer .an-flink:focus-visible {
+      color: #fff;
+    }
+
+    .an-footer .an-social {
+      transition: color .25s ease, background-color .25s ease;
+    }
+
+    .an-footer .an-social:hover,
+    .an-footer .an-social:focus-visible {
+      color: #fff;
+      background-color: #C93708;
+      outline: none;
+    }
+
+/* ===== Footer component ===== */
+/* Footer social icons: solid brand fill on hover, no border */
+  .footer-social { transition: color .25s ease, background-color .25s ease; }
+  .footer-social:hover,
+  .footer-social:focus-visible {
+    color: #fff;
+    background-color: #C93708;
+    outline: none;
+  }
+
+/* ===== Header component (critical overrides) ===== */
+#site-header .logo-img-white { display: block !important; }
+  #site-header .logo-img-black { display: none !important; }
+  #site-header.nav-theme-light .logo-img-white { display: none !important; }
+  #site-header.nav-theme-light .logo-img-black { display: block !important; }
+  #site-header .nav-brand-center,
+  #site-header .logo-wrap,
+  #site-header .logo-wordmark-img,
+  #site-header .logo-img {
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+  #site-header .nav-menu-btn {
+    border: none !important;
+  }
+
+/* ===== Services: 3D Product Visualization page (.pv + AR viewer) ===== */
+.pv main>section {
+      padding-block: clamp(5rem, 9vw, 8rem) !important;
+    }
+
+    .pv main>#service-hero {
+      padding-block: 0 !important;
+    }
+
+    .pv main>#faq {
+      padding-top: 0 !important;
+    }
+
+    .pv main {
+      overflow-x: clip;
+    }
+
+    .pv .pv-mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      letter-spacing: 0.18em;
+    }
+
+    .pv .pv-display {
+      font-family: 'Archivo', sans-serif;
+      font-variation-settings: 'wdth' 125;
+      font-stretch: 125%;
+      font-weight: 600;
+    }
+
+    .cap-track {
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      cursor: grab;
+    }
+
+    .cap-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cap-track.is-dragging {
+      cursor: grabbing;
+      scroll-snap-type: none;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] .pv-faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .pv-faq-icon {
+      transition: transform .3s ease;
+    }
+
+    .pv main>#pv-viewer+#pv-industries {
+      padding-top: 0 !important;
+    }
+
+    #arvr-stage {
+      --embed-clip: 104px;
+      transition: background-color .4s ease;
+    }
+
+    /* The embed draws its own "View in AR" pill near its bottom edge and has no option to hide it,
+       so the iframe overhangs the stage by --embed-clip top and bottom and the stage crops it off.
+       Equal overhang keeps the model centred. */
+    #arvr-embed {
+      top: calc(-1 * var(--embed-clip));
+      height: calc(100% + 2 * var(--embed-clip));
+    }
+
+    #arvr-viewer [hidden] {
+      display: none !important;
+    }
+
+    #arvr-stage model-viewer {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      --poster-color: transparent;
+      --progress-bar-color: #C93708;
+      opacity: 0;
+      transition: opacity .6s ease;
+    }
+
+    #arvr-stage model-viewer.is-ready {
+      opacity: 1;
+    }
+
+    .arvr-swatch[aria-pressed="true"] {
+      border-color: #C93708;
+      box-shadow: 0 0 0 1px #C93708;
+    }
+
+    .arvr-btn-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 9999px;
+      background-color: #151210;
+      color: #ffffff;
+      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.12), 0 1px 2px -1px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+      transition: opacity .15s ease, transform .15s ease;
+    }
+    .arvr-btn-circle svg {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
+    #arvr-ar-toggle svg {
+      width: 1rem;
+      height: 1rem;
+      transition: transform .35s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    /* Collapse: "−" folds the two actions down into the toggle and turns into "+"; "+" brings them back. */
+    #arvr-toggle-plus-line {
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: scaleY(0);
+      transition: transform .35s cubic-bezier(.16, 1, .3, 1);
+    }
+    #arvr-ar-toggle[aria-expanded="false"] svg { transform: rotate(180deg); }
+    #arvr-ar-toggle[aria-expanded="false"] #arvr-toggle-plus-line { transform: scaleY(1); }
+
+    #arvr-ar-actions > button {
+      transform-origin: bottom right;
+      transition: opacity .28s ease, transform .4s cubic-bezier(.16, 1, .3, 1);
+    }
+    #arvr-ar-actions > button:first-child { transition-delay: .06s; }
+    #arvr-ar-actions.is-collapsed > button {
+      opacity: 0;
+      transform: translateY(14px) scale(.85);
+      pointer-events: none;
+    }
+    #arvr-ar-actions.is-collapsed > button:first-child { transition-delay: 0s; }
+    #arvr-ar-actions.is-collapsed > button:last-child { transition-delay: .05s; }
+    .arvr-action-label {
+      font-size: 0.6875rem;
+      line-height: 0.875rem;
+      font-weight: 500;
+      color: #151210;
+      user-select: none;
+      letter-spacing: -0.01em;
+    }
+    @media (min-width: 640px) {
+      .arvr-action-label {
+        font-size: 0.75rem;
+      }
+    }
+    #arvr-ar:hover .arvr-btn-circle,
+    #arvr-tryon:hover .arvr-btn-circle,
+    #arvr-ar-toggle:hover {
+      opacity: .85;
+      transform: scale(1.04);
+    }
+
+    #arvr-ar-panel {
+      display: none;
+    }
+    #arvr-viewer:fullscreen #arvr-ar-panel:not([hidden]),
+    #arvr-viewer:-webkit-full-screen #arvr-ar-panel:not([hidden]),
+    #arvr-viewer.is-pseudo-fs #arvr-ar-panel:not([hidden]) {
+      display: flex;
+    }
+
+    /* The reveal effect leaves a transform on the viewer's column. While full screen is animating or
+       faked with position:fixed (iPhone), that transform would trap the viewer inside the column. */
+    html.js-anim [data-reveal].arvr-lift {
+      transform: none !important;
+      will-change: auto !important;
+    }
+
+    #arvr-viewer.is-pseudo-fs {
+      position: fixed;
+      inset: 0;
+      z-index: 100000;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      background: #F5F1EB;
+    }
+
+    #arvr-viewer:fullscreen {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      background: #F5F1EB;
+    }
+
+    #arvr-viewer:-webkit-full-screen {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      background: #F5F1EB;
+    }
+
+    #arvr-viewer.is-pseudo-fs #arvr-stage,
+    #arvr-viewer:fullscreen #arvr-stage {
+      flex: 1;
+      aspect-ratio: auto;
+    }
+
+    #arvr-viewer:-webkit-full-screen #arvr-stage {
+      flex: 1;
+      aspect-ratio: auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #arvr-stage,
+      #arvr-stage model-viewer,
+      #arvr-ar-toggle svg,
+      #arvr-toggle-plus-line,
+      #arvr-ar-actions > button {
+        transition: none;
+      }
+    }
+
+    #pv-form select {
+      color-scheme: dark;
+    }
+
+    #pv-form select:invalid {
+      color: rgba(255, 255, 255, .4);
+    }
+
+    #pv-form select option {
+      background-color: #151210;
+      color: #ffffff;
+    }
+
+    #pv-form [aria-invalid="true"] {
+      border-color: #FF6A38;
+    }
+.ba-range { -webkit-appearance: none; appearance: none; background: transparent; cursor: ew-resize; margin: 0; opacity: 0; }
+          .ba-range::-webkit-slider-thumb { -webkit-appearance: none; width: 48px; height: 100%; }
+          .ba-range:focus-visible ~ .ba-line .ba-knob { outline: 2px solid #C93708; outline-offset: 3px; }
+          #pv-ba img { object-position: center 30%; }
+          /* The "before" storyboard frame is shot much wider than the "after" product render,
+             so the machine reads tiny next to it; scale it up so both halves show the product
+             at roughly the same size where the slider splits them. */
+          #pv-ba .ba-before-img { transform: scale(2.2); }
+
+/* ===== Services: AR/VR Experiences page ===== */
+/* =====================================================================
+       AR / VR / INTERACTIVE 3D SERVICE PAGE
+       Same components as the 3D & CGI and animation service pages; this block
+       only sets the page rhythm and the page-specific widgets.
+       ===================================================================== */
+
+    /* !important: the shared .site-page section rule in style.css is more specific than utilities. */
+    .pv main>section {
+      padding-block: clamp(5rem, 9vw, 8rem) !important;
+    }
+
+    .pv main>#service-hero,
+    .pv main>#vr-experiences {
+      padding-block: 0 !important;
+    }
+
+    /* FAQ continues the process section's cream background */
+    .pv main>#faq {
+      padding-top: 0 !important;
+    }
+
+    .pv main {
+      overflow-x: clip;
+    }
+
+    /* .pv prefix: must outrank style.css's ".site-page main p" font rule */
+    .pv .pv-mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      letter-spacing: 0.18em;
+    }
+
+    .pv .pv-display {
+      font-family: 'Archivo', sans-serif;
+      font-variation-settings: 'wdth' 125;
+      font-stretch: 125%;
+      font-weight: 600;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] .pv-faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .pv-faq-icon {
+      transition: transform .3s ease;
+    }
+
+    /* "Try it on your phone": QR codes on desktop, tap-to-launch buttons on touch screens */
+    .ar-try-touch {
+      display: none;
+    }
+
+    @media (pointer: coarse) {
+      .ar-try-qr {
+        display: none;
+      }
+
+      .ar-try-touch {
+        display: block;
+      }
+    }
+
+    #ar-try-stage model-viewer {
+      width: 100%;
+      height: 100%;
+      background-color: #EDE7DE;
+      --poster-color: transparent;
+      --progress-bar-color: #C93708;
+    }
+
+    .arvr-swatch[aria-pressed="true"],
+    .arvr-swatch[aria-checked="true"] {
+      border-color: #C93708;
+      box-shadow: 0 0 0 1px #C93708;
+    }
+
+    /* Image configurator: crossfade between pre-rendered colourways */
+    #arvr-config-img {
+      transition: opacity .25s ease;
+    }
+
+    #arvr-config-img.is-swapping {
+      opacity: .35;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #arvr-config-img {
+        transition: none;
+      }
+    }
+
+    #arvr-form select {
+      color-scheme: dark;
+    }
+
+    #arvr-form select:invalid {
+      color: rgba(255, 255, 255, .72);
+    }
+
+    #arvr-form select option {
+      background-color: #151210;
+      color: #ffffff;
+    }
+
+    #arvr-form [aria-invalid="true"] {
+      border-color: #FF6A38;
+    }
+
+/* ===== Services: Product Animation page (.an) ===== */
+/* =====================================================================
+       ANIMATION SERVICE PAGE
+       Layout is Tailwind utilities; this block only sets the page rhythm.
+       ===================================================================== */
+
+    /* One vertical rhythm for every section. !important: the shared
+       .site-page section rule in style.css is more specific than utilities. */
+    .an main>section {
+      padding-block: clamp(5rem, 9vw, 8rem) !important;
+    }
+
+    /* Hero sizes itself like work.html's hero (min-height + inner padding) */
+    .an main>#service-hero {
+      padding-block: 0 !important;
+    }
+
+    /* iOS Safari can let wide content push the page sideways */
+    .an main {
+      overflow-x: clip;
+    }
+
+    /* Industries slider: hide the scrollbar, keep swipe + snap */
+    .industry-track {
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      cursor: grab;
+    }
+
+    .industry-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .industry-track.is-dragging {
+      cursor: grabbing;
+      scroll-snap-type: none;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /* Form dropdown select options styling on dark theme */
+    #film-form select {
+      color-scheme: dark;
+    }
+
+    /* Placeholder text dimmed like 3d-product-visualization.html, on optional dropdowns too */
+    #film-form select:has(option[value=""]:checked) {
+      color: rgba(255, 255, 255, .4);
+    }
+
+    #film-form select option {
+      background-color: #151210;
+      color: #ffffff;
+    }
+
+/* ===== Work listing page ===== */
+:root { --font-display: 'Archivo Expanded', 'Archivo', system-ui, -apple-system, sans-serif; }
+    body { background-color: #F5F1EB; margin: 0; }
+    .hero-h1, .hero-h1 span { font-family: var(--font-display) !important; font-stretch: 125%; font-variation-settings: 'wdth' 125; }
+    .hero-title-line { display: inline-block; }
+    .line { display: block; overflow: hidden; }
+@media (max-width: 639px) {
+      .project-card[data-slug="mitsuba"] .project-image-mask img {
+        object-position: 54% center !important;
+      }
+    }
+
+/* ===== Works: Mitsuba case study ===== */
+.yt-volume-slider{-webkit-appearance:none;appearance:none;height:3px;border-radius:9999px;outline:none;background:linear-gradient(to right,rgba(255,255,255,.9) 0%,rgba(255,255,255,.3) 0%)}
+    .yt-volume-slider::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:#fff;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.35)}
+    .yt-volume-slider::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;cursor:pointer;border:none;box-shadow:0 1px 3px rgba(0,0,0,.35)}
+    .yt-volume-slider::-webkit-slider-runnable-track{height:3px;border-radius:9999px}
+    .yt-volume-slider::-moz-range-track{height:3px;border-radius:9999px;background:rgba(255,255,255,.3)}
+    .yt-volume-slider::-moz-range-progress{height:3px;border-radius:9999px;background:rgba(255,255,255,.9)}
+
+/* ===== Under-construction service pages ===== */
+.uc-hero { position: relative; display: flex; align-items: center; min-height: 100vh; min-height: 100svh; overflow: hidden; background: #151210; color: #F5F1EB; }
+.uc-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .28; }
+.uc-veil { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(21, 18, 16, .55), rgba(21, 18, 16, .94)); }
+.uc-inner { position: relative; z-index: 1; width: 100%; max-width: 80rem; margin-inline: auto; padding: 8rem 1rem 5rem; }
+.uc-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--brand); }
+.uc-dot { width: .375rem; height: .375rem; border-radius: 9999px; background: var(--brand); animation: uc-pulse 1.6s ease-in-out infinite; }
+@keyframes uc-pulse { 50% { opacity: .3; } }
+.uc-title { margin-top: 1.25rem; max-width: 56rem; font-size: clamp(2.25rem, 6vw, 5rem); line-height: 1; letter-spacing: -.03em; color: #fff; }
+.site-page main .uc-text { margin-top: 1.5rem; max-width: 36rem; font-size: 1rem; line-height: 1.7; color: rgba(245, 241, 235, .7); }
+.uc-actions { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: .75rem; }
+.uc-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: .75rem 1.75rem; border-radius: 9999px; font-size: .875rem; font-weight: 600; transition: background-color .2s ease, border-color .2s ease; }
+.uc-btn--primary { background: var(--brand); color: #fff; }
+.uc-btn--primary:hover { background: #a92e06; }
+.uc-btn--ghost { border: 1px solid rgba(245, 241, 235, .25); color: #F5F1EB; }
+.uc-btn--ghost:hover { border-color: #F5F1EB; }
+.uc-btn:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+@media (min-width: 640px) { .uc-inner { padding-inline: 1.5rem; } }
+@media (min-width: 1024px) { .uc-inner { padding-inline: 2rem; } }
+@media (prefers-reduced-motion: reduce) { .uc-dot { animation: none; } }
