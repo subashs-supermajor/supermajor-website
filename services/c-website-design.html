@@ -201,44 +201,54 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
       <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(21,18,16,0.92), rgba(21,18,16,0.25) 72%);"></div>
 
       <div class="relative z-10 mx-auto w-full max-w-[80rem] px-6 pb-10 pt-20 sm:pb-12 sm:pt-24 md:px-8 lg:pb-14 lg:pt-28">
-        <p class="sv-hero-eyebrow"><span aria-hidden="true">&#9679;</span> Website Design &amp; Development</p>
-        <h1 id="hero-title" class="sv-hero-h1 text-white">Websites That Move Your Business Forward.</h1>
-        <p class="sv-hero-lead mt-5 font-normal sm:mt-6">Modern, responsive websites that make your brand clear and turn visitors into enquiries.</p>
+        <p class="sv-hero-eyebrow"><span aria-hidden="true">&#9679;</span> UI/UX Design and Development</p>
+        <h1 id="hero-title" class="sv-hero-h1 text-white">Website Design and Development Services</h1>
+        <p class="sv-hero-lead mt-5 font-normal sm:mt-6">Business websites, landing pages and online stores, designed by our team and built with our developers or a trusted partner. Recent work: UI/UX design for Mitsuba India's 25th anniversary website.</p>
         <div class="mt-6 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-          <a href="#contact" class="sv-btn sv-btn--primary cta-web-hero-start-project" data-track="hero_cta_click" data-track-label="Start Your Website Project">
-            Start Your Website Project
+          <a href="#contact" class="sv-btn sv-btn--primary cta-web-hero-start-project" data-track="hero_cta_click" data-track-label="Start a Project">
+            Start a Project
             <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
           </a>
           <a href="https://calendly.com/supermajor/15min" target="_blank" rel="noopener noreferrer" class="sv-btn sv-btn--ghost cta-web-hero-book-call" data-track="hero_cta_click" data-track-label="Book a Call">Book a Call</a>
           <a href="#selected-work" class="sv-btn sv-btn--ghost cta-web-hero-explore-work" data-track="hero_cta_click" data-track-label="Explore Our Work">Explore Our Work</a>
         </div>
+        <p class="mt-5 text-sm text-white/70">Send us a brief and we'll confirm scope and timeline within 24 hours.</p>
       </div>
     </section>
 
-    <!-- Device demo: the one memorable moment on this page -->
-    <section class="sv-light" aria-labelledby="screens-title">
-      <div class="mx-auto" data-tabs="Device demo" data-mobile-tab="phone">
+    <!-- Proof -->
+    <section id="selected-work" class="sv-light" aria-labelledby="work-title">
+      <div class="mx-auto">
         <div class="sv-head">
-          <h2 id="screens-title" class="sv-h2">One Experience. Every Screen.</h2>
+          <h2 id="work-title" class="sv-h2">Recent Website Projects</h2>
         </div>
-        <div class="sv-device__bar">
-          <div class="sv-tabs" role="tablist" aria-label="Choose a screen size">
-            <button type="button" class="sv-tab" role="tab" id="tab-desktop" data-tab="desktop" aria-controls="device-panel">Desktop</button>
-            <button type="button" class="sv-tab" role="tab" id="tab-tablet" data-tab="tablet" aria-controls="device-panel">Tablet</button>
-            <button type="button" class="sv-tab" role="tab" id="tab-phone" data-tab="phone" aria-controls="device-panel">Phone</button>
-          </div>
-          <p class="sv-device__note" aria-live="polite">
-            <span class="sv-note-text" data-panel="desktop">Room for the full story.</span>
-            <span class="sv-note-text" data-panel="tablet">The layout reflows, nothing shrinks.</span>
-            <span class="sv-note-text" data-panel="phone">Built first for the screen in your hand.</span>
-          </p>
-        </div>
-        <div class="sv-device__stage" id="device-panel" role="tabpanel" aria-label="The same page at the selected screen size">
-          <div class="sv-device__frame">
-            <img data-panel="desktop" src="../assets/web-design/screen-desktop.webp" alt="Super Major service page at desktop width" width="1280" height="800" loading="lazy" decoding="async">
-            <img data-panel="tablet" src="../assets/web-design/screen-tablet.webp" alt="The same page reflowed for a tablet" width="640" height="859" loading="lazy" decoding="async">
-            <img data-panel="phone" src="../assets/web-design/screen-mobile.webp" alt="The same page reflowed for a phone" width="480" height="1039" loading="lazy" decoding="async">
-          </div>
+        <div class="sv-proof">
+          <article>
+            <div class="sv-work__media">
+              <img src="../assets/service-media/hero-mitsuba.webp" alt="Mitsuba India website landing page in a browser window" width="960" height="540" loading="lazy" decoding="async">
+              <button type="button" class="sv-play" data-track="portfolio_interaction" data-track-label="Play: Mitsuba site scroll-through"
+                data-play="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Landing%20Page%20Scroll%2016-9.webm"
+                data-poster="../assets/service-media/hero-mitsuba.webp"
+                data-title="Scroll-through of the Mitsuba India website">
+                <iconify-icon icon="solar:play-bold"></iconify-icon> Watch the scroll-through
+              </button>
+            </div>
+            <div class="sv-work__text">
+              <h3 class="sv-h3">Mitsuba India 25th Anniversary</h3>
+              <p class="sv-copy">UI/UX design by Super Major. Development by Madmaze Studio.</p>
+              <a href="../works/mitsuba" class="sv-work__link cta-web-work-mitsuba" data-track="portfolio_click" data-track-label="View Project: Mitsuba">View Project</a>
+            </div>
+          </article>
+          <article>
+            <div class="sv-work__media">
+              <img src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/thumbnail.webp" alt="Super Major website homepage" width="1897" height="865" loading="lazy" decoding="async">
+            </div>
+            <div class="sv-work__text">
+              <h3 class="sv-h3">Super Major Studio Website</h3>
+              <p class="sv-copy">Our own site, from brand story to enquiry.</p>
+              <a href="../" class="sv-work__link cta-web-work-supermajor" data-track="portfolio_click" data-track-label="View Project: Super Major website">View Project</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -247,7 +257,7 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
     <section id="what-we-build" class="sv-dark" aria-labelledby="build-title">
       <div class="mx-auto">
         <div class="sv-head">
-          <h2 id="build-title" class="sv-h2">Everything Your Digital Presence Needs.</h2>
+          <h2 id="build-title" class="sv-h2">Website Design Services</h2>
         </div>
         <div class="sv-services">
           <div>
@@ -291,39 +301,30 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
       </div>
     </section>
 
-    <!-- Proof -->
-    <section id="selected-work" class="sv-light" aria-labelledby="work-title">
-      <div class="mx-auto">
+    <!-- Device demo: the one memorable moment on this page -->
+    <section class="sv-light" aria-labelledby="screens-title">
+      <div class="mx-auto" data-tabs="Device demo" data-mobile-tab="phone">
         <div class="sv-head">
-          <h2 id="work-title" class="sv-h2">Digital Experiences Made to Matter.</h2>
+          <h2 id="screens-title" class="sv-h2">Responsive on Desktop, Tablet and Phone</h2>
         </div>
-        <div class="sv-proof">
-          <article>
-            <div class="sv-work__media">
-              <img src="../assets/service-media/hero-mitsuba.webp" alt="Mitsuba India website landing page in a browser window" width="960" height="540" loading="lazy" decoding="async">
-              <button type="button" class="sv-play" data-track="portfolio_interaction" data-track-label="Play: Mitsuba site scroll-through"
-                data-play="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Landing%20Page%20Scroll%2016-9.webm"
-                data-poster="../assets/service-media/hero-mitsuba.webp"
-                data-title="Scroll-through of the Mitsuba India website">
-                <iconify-icon icon="solar:play-bold"></iconify-icon> Watch the scroll-through
-              </button>
-            </div>
-            <div class="sv-work__text">
-              <h3 class="sv-h3">Mitsuba India 25th Anniversary</h3>
-              <p class="sv-copy">UI/UX design by Super Major. Development by Madmaze Studio.</p>
-              <a href="../works/mitsuba" class="sv-work__link cta-web-work-mitsuba" data-track="portfolio_click" data-track-label="View Project: Mitsuba">View Project</a>
-            </div>
-          </article>
-          <article>
-            <div class="sv-work__media">
-              <img src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/thumbnail.webp" alt="Super Major website homepage" width="1897" height="865" loading="lazy" decoding="async">
-            </div>
-            <div class="sv-work__text">
-              <h3 class="sv-h3">Super Major Studio Website</h3>
-              <p class="sv-copy">Our own site, from brand story to enquiry.</p>
-              <a href="../" class="sv-work__link cta-web-work-supermajor" data-track="portfolio_click" data-track-label="View Project: Super Major website">View Project</a>
-            </div>
-          </article>
+        <div class="sv-device__bar">
+          <div class="sv-tabs" role="tablist" aria-label="Choose a screen size">
+            <button type="button" class="sv-tab" role="tab" id="tab-desktop" data-tab="desktop" aria-controls="device-panel">Desktop</button>
+            <button type="button" class="sv-tab" role="tab" id="tab-tablet" data-tab="tablet" aria-controls="device-panel">Tablet</button>
+            <button type="button" class="sv-tab" role="tab" id="tab-phone" data-tab="phone" aria-controls="device-panel">Phone</button>
+          </div>
+          <p class="sv-device__note" aria-live="polite">
+            <span class="sv-note-text" data-panel="desktop">Room for the full story.</span>
+            <span class="sv-note-text" data-panel="tablet">The layout reflows, nothing shrinks.</span>
+            <span class="sv-note-text" data-panel="phone">Built first for the screen in your hand.</span>
+          </p>
+        </div>
+        <div class="sv-device__stage" id="device-panel" role="tabpanel" aria-label="The same page at the selected screen size">
+          <div class="sv-device__frame">
+            <img data-panel="desktop" src="../assets/web-design/screen-desktop.webp" alt="Super Major service page at desktop width" width="1280" height="800" loading="lazy" decoding="async">
+            <img data-panel="tablet" src="../assets/web-design/screen-tablet.webp" alt="The same page reflowed for a tablet" width="640" height="859" loading="lazy" decoding="async">
+            <img data-panel="phone" src="../assets/web-design/screen-mobile.webp" alt="The same page reflowed for a phone" width="480" height="1039" loading="lazy" decoding="async">
+          </div>
         </div>
       </div>
     </section>
@@ -332,7 +333,7 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
     <section class="sv-accent" aria-labelledby="value-title">
       <div class="mx-auto">
         <div class="sv-head">
-          <h2 id="value-title" class="sv-h2">Beautiful Websites Should Perform Beautifully.</h2>
+          <h2 id="value-title" class="sv-h2">What We Check Before Launch</h2>
         </div>
         <ul class="sv-trio">
           <li>
@@ -358,7 +359,7 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
     <section class="sv-light" aria-labelledby="process-title">
       <div class="mx-auto">
         <div class="sv-head">
-          <h2 id="process-title" class="sv-h2">From First Idea to Final Launch.</h2>
+          <h2 id="process-title" class="sv-h2">How a Website Project Works</h2>
         </div>
         <ol class="sv-steps">
           <li><h3 class="sv-h3">Discover</h3><p class="sv-copy">Your brand, audience and goals.</p></li>
@@ -501,10 +502,10 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
         <div>
           <p class="mb-5 text-xs font-semibold uppercase text-[#C93708]"
             style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.18em;">
-            PLAN A DESIGN
+            START A PROJECT
           </p>
-          <h2 id="contact-title" class="sv-h2">Send Us What You Have.</h2>
-          <p class="sv-lead" style="margin-top:1.25rem">An existing website, brand guidelines or just an idea. We will reply with a clear next step.</p>
+          <h2 id="contact-title" class="sv-h2">Tell Us About Your Website</h2>
+          <p class="sv-lead" style="margin-top:1.25rem">Send your current site, brand guidelines or just an idea. We'll reply within 24 hours with scope and timeline.</p>
           <a href="mailto:business@supermajor.in" class="sv-email" data-track="email_click" data-track-label="business@supermajor.in">business@supermajor.in</a>
         </div>
 
@@ -569,7 +570,7 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
           <div class="sm:col-span-2">
             <button type="submit"
               class="cta-web-form-submit inline-flex min-h-11 items-center justify-center rounded-full bg-[#C93708] px-7 py-3 text-sm font-semibold text-white outline-none transition hover:bg-[#C93708]/90 focus-visible:ring-2 focus-visible:ring-[#C93708] focus-visible:ring-offset-2 focus-visible:ring-offset-[#151210]"
-              style="font-family:'Archivo',sans-serif;">Start Your Website Project</button>
+              style="font-family:'Archivo',sans-serif;">Send Enquiry</button>
           </div>
           <p id="enquiry-status" class="sv-status sm:col-span-2" role="status" aria-live="polite" hidden></p>
         </form>
