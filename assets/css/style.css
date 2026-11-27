@@ -936,6 +936,10 @@ html.js-anim [data-reveal].revealed {
   transform: translateY(-1px);
 }
 
+#services-list .service-tag-box:hover {
+  color: #151210;
+}
+
 /* Work cards on phones: let the service tags wrap (2 per row) instead of scrolling sideways */
 @media (max-width: 639px) {
   .work-card-meta .no-scrollbar {
@@ -4095,15 +4099,17 @@ body {
     }
 
     /* .pv prefix: must outrank style.css's ".site-page main p" font rule */
-    .pv .pv-mono {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    .pv .pv-mono,
+    .pv-mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !important;
       letter-spacing: 0.18em;
     }
 
-    .pv .pv-display {
-      font-family: 'Archivo', sans-serif;
-      font-variation-settings: 'wdth' 125;
-      font-stretch: 125%;
+    .pv .pv-display,
+    .pv-display {
+      font-family: 'Archivo', sans-serif !important;
+      font-variation-settings: 'wdth' 125 !important;
+      font-stretch: 125% !important;
       font-weight: 600;
     }
 
@@ -4278,3 +4284,107 @@ body {
 @media (min-width: 640px) { .uc-inner { padding-inline: 1.5rem; } }
 @media (min-width: 1024px) { .uc-inner { padding-inline: 2rem; } }
 @media (prefers-reduced-motion: reduce) { .uc-dot { animation: none; } }
+/* Services hub (services.html) */
+
+/* Services: sticky media frame (desktop) beside the scrolling list */
+.svc-show__thumb { aspect-ratio: 16 / 10; overflow: hidden; border-radius: 0; background: #EDE8DF; border: 1px solid rgba(16, 13, 11, .1); }
+.svc-show__thumb img, .svc-show__thumb video { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 1024px) { .svc-row--flip > figure { order: 2; } }
+.svc-chip { display: inline-flex; align-items: center; border: 1px solid rgba(16, 13, 11, .18); padding: .55rem .85rem; font-size: .6875rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(16, 13, 11, .8); }
+.svc-cta { position: relative; display: inline-flex; align-items: center; gap: .6rem; min-height: 2.75rem; font-size: .8125rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #C93708; transition: color .25s ease; }
+.svc-cta::after { content: ''; position: absolute; left: 0; right: 0; bottom: .35rem; height: 1.5px; background: currentColor; transform: scaleX(0); transform-origin: left center; transition: transform .7s cubic-bezier(.25, .1, .25, 1); }
+.svc-cta:hover { color: #110E0C; }
+.svc-cta:hover::after,
+.svc-cta:focus-visible::after { transform: scaleX(1); }
+.svc-cta:focus-visible { outline: 2px solid #C93708; outline-offset: 3px; }
+
+/* Proof: category tabs, arrows and a swipeable rail that bleeds to the right edge */
+.svc-tab { display: inline-flex; align-items: center; gap: .4rem; min-height: 2.75rem; padding: 0 1rem; border: 1px solid rgba(255, 255, 255, .22); color: #fff; font-size: .875rem; transition: background-color .25s ease, color .25s ease; }
+.svc-tab span { opacity: .6; }
+.svc-tab:hover { border-color: #fff; }
+.svc-tab[aria-current="true"] { background: #fff; color: #110E0C; border-color: #fff; }
+.svc-arrow { display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border: 1px solid rgba(255, 255, 255, .2); color: #fff; transition: background-color .25s ease, border-color .25s ease, color .25s ease; }
+.svc-arrow:hover { background: #C93708; border-color: #C93708; color: #fff; }
+.svc-arrow:disabled { opacity: .3; pointer-events: none; }
+.svc-tab:focus-visible, .svc-arrow:focus-visible, .svc-rail:focus-visible, .svc-card__link:focus-visible { outline: 2px solid #C93708; outline-offset: 2px; }
+.svc-rail { position: relative; display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; margin-right: calc(50% - 50vw); }
+.svc-rail::-webkit-scrollbar { display: none; }
+/* trailing spacer so card 08 can snap its left edge to the container left */
+.svc-rail::after { content: ''; flex: 0 0 max(1rem, calc(14% - 1rem)); }
+@media (min-width: 768px) { .svc-rail::after { flex-basis: max(1rem, calc(38% - 1rem)); } }
+@media (min-width: 1280px) { .svc-rail::after { flex-basis: max(1rem, calc(46% - 1rem)); } }
+.svc-card { position: relative; flex: 0 0 86%; aspect-ratio: 4 / 3; overflow: hidden; background: #181412; scroll-snap-align: start; }
+@media (min-width: 768px) { .svc-card { flex-basis: 62%; aspect-ratio: 16 / 10; } }
+@media (min-width: 1280px) { .svc-card { flex-basis: 54%; } }
+.svc-card > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.svc-card__shade { position: absolute; inset: auto 0 0 0; height: 60%; background: linear-gradient(to top, rgba(0, 0, 0, .78), transparent); pointer-events: none; }
+.svc-card__body { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; padding: 1.25rem 1.5rem; }
+.svc-card__title { font-size: 1.375rem; font-weight: 500; line-height: 1.2; color: #fff; }
+.svc-card__meta { display: block; margin-top: .3rem; font-size: .75rem; line-height: 1.4; color: rgba(255, 255, 255, .68); }
+.svc-card__link { flex-shrink: 0; display: inline-flex; align-items: center; gap: .35rem; min-height: 2.75rem; font-size: .875rem; color: rgba(255, 255, 255, .9); transition: color .25s ease; }
+.svc-card__link iconify-icon { display: inline-flex; transition: transform .35s cubic-bezier(.16, 1, .3, 1), color .25s ease; }
+.svc-card:hover .svc-card__link,
+.svc-card__link:hover { color: #FF6A38; }
+.svc-card:hover .svc-card__link iconify-icon,
+.svc-card__link:hover iconify-icon { transform: rotate(90deg) scale(1.15); }
+.svc-strip { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.svc-strip img { width: 100%; height: 100%; object-fit: cover; }
+@media (prefers-reduced-motion: reduce) { .svc-rail { scroll-behavior: auto; } }
+
+/* Services hero headline: rows fixed to the product-animation headline height at every breakpoint, so both banners
+   are the same height; the font shrinks only where the first line would not fit. */
+.svc-page main h1.svc-hero-h1 { font-size: 1.875rem !important; line-height: 1.875rem !important; }
+@media (min-width: 640px) { .svc-page main h1.svc-hero-h1 { font-size: min(2.5rem, calc((100vw - 3rem) / 14.6)) !important; line-height: 2.5rem !important; } }
+@media (min-width: 768px) { .svc-page main h1.svc-hero-h1 { font-size: calc((100vw - 4rem) / 14.6) !important; line-height: 4.5rem !important; } }
+@media (min-width: 1024px) { .svc-page main h1.svc-hero-h1 { font-size: min(5.25rem, calc((100vw - 4rem) / 14.6)) !important; line-height: 5.25rem !important; } }
+
+/* Services hero sizes itself like the product-animation hero (min-height + inner padding).
+   !important: the shared .site-page section padding rule is more specific than utilities. */
+.svc-page main > #service-hero { padding-block: 0 !important; }
+
+/* Services proof controls: on phones the arrows sit on the right above the tabs, and the tabs stay on one
+   row that scrolls sideways; from 1024px the tabs and arrows share one row. */
+.svc-controls { display: flex; flex-direction: column-reverse; gap: .375rem; }
+.svc-controls > .svc-arrows { display: flex; gap: .5rem; align-self: flex-end; }
+@media (min-width: 1024px) {
+  .svc-controls { flex-direction: row; align-items: center; }
+  .svc-controls > .svc-arrows { margin-left: auto; align-self: auto; }
+}
+.svc-tabs { position: relative; display: flex; flex-wrap: nowrap; gap: .5rem; min-width: 0; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 3px; margin: -3px; }
+.svc-tabs::-webkit-scrollbar { display: none; }
+.svc-tab { flex-shrink: 0; white-space: nowrap; }
+
+/* Services FAQ: interactive auto-collapse accordion & smooth icon rotation */
+#faq details {
+  transition: background-color 0.25s ease, padding 0.25s ease;
+}
+#faq details summary {
+  transition: color 0.2s ease;
+}
+#faq details summary:hover {
+  color: #C93708;
+}
+#faq details summary:hover .pv-faq-icon {
+  color: #C93708;
+}
+#faq details .pv-faq-icon {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+}
+#faq details[open] .pv-faq-icon {
+  transform: rotate(45deg);
+  color: #C93708;
+}
+#faq details[open] {
+  background-color: rgba(237, 232, 223, 0.35);
+  padding-inline: 0.75rem;
+}
+@media (min-width: 640px) {
+  #faq details[open] {
+    padding-inline: 1rem;
+  }
+}
+#faq details p {
+  overflow: hidden;
+}
+.svc-card__num { display: block; margin-bottom: .4rem; font: 600 .6875rem/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .14em; color: #FF6A38; }
+.svc-card > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }

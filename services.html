@@ -18,7 +18,7 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
   <link rel="canonical" href="https://supermajor.in/services">
   <meta name="description" content="3D product visualization services from one source model: renders, product films, AR and web viewers. Send your CAD to our studio.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#151210">
+  <meta name="theme-color" content="#110E0C">
   <link rel="icon" type="image/webp" href="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/fav-icon.webp" />
 
   <!-- Open Graph / Link Preview -->
@@ -27,17 +27,17 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
   <meta property="og:url" content="https://supermajor.in/services">
   <meta property="og:title" content="3D Product Visualization Services | Super Major Studio">
   <meta property="og:description" content="3D product visualization services from one source model: renders, product films, AR and web viewers. Send your CAD to our studio.">
-  <meta property="og:image" content="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/thumbnail.webp">
-  <meta property="og:image:width" content="1897">
-  <meta property="og:image:height" content="865">
+  <meta property="og:image" content="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/cover-banner.webp">
+  <meta property="og:image:width" content="1376">
+  <meta property="og:image:height" content="768">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="3D Product Visualization Services | Super Major Studio">
   <meta name="twitter:description" content="3D product visualization services from one source model: renders, product films, AR and web viewers. Send your CAD to our studio.">
-  <meta name="twitter:image" content="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/thumbnail.webp">
+  <meta name="twitter:image" content="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/cover-banner.webp">
 
-  <!-- Structured data -->
+  <!-- Structured data: breadcrumb, organisation, the hub service and its seven services -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,42 +53,60 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
         "@type": "Organization",
         "@id": "https://supermajor.in/#organization",
         "name": "Super Major",
+        "alternateName": ["SuperMajor", "Super Major Studio"],
         "url": "https://supermajor.in/",
         "logo": "https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/fav-icon.webp",
         "email": "business@supermajor.in",
+        "sameAs": ["https://www.linkedin.com/company/super-major-studio/"],
         "address": { "@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN" }
       },
       {
         "@type": "Service",
-        "name": "3D Product Visualization",
-        "serviceType": "Product CGI Studio",
+        "@id": "https://supermajor.in/services#service",
+        "name": "3D Product Visualization Services",
+        "serviceType": "Product visualization studio",
         "url": "https://supermajor.in/services",
         "description": "3D product visualization services from one source model: renders, product films, AR and web viewers.",
-        "provider": { "@id": "https://supermajor.in/#organization" }
+        "provider": { "@id": "https://supermajor.in/#organization" },
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "3D product visualization services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3D product rendering services", "url": "https://supermajor.in/services/3d-product-visualization" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3D product animation services", "url": "https://supermajor.in/services/product-animation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exploded view animation", "url": "https://supermajor.in/services/product-animation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AR product visualization", "url": "https://supermajor.in/services/ar-vr-experiences" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3D product configurator development", "url": "https://supermajor.in/services/ar-vr-experiences" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product websites", "url": "https://supermajor.in/services/website-design" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gen AI product content", "url": "https://supermajor.in/services/generative-ai" } }
+          ]
+        }
       }
     ]
   }
   </script>
 
-  <!-- Fonts (non-blocking) -->
+  <!-- Preconnected Fonts (same families and axes as product-animation.html) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Inter:wght@400..800&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Inter:wght@400..800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Inter:wght@400..800&display=swap" rel="stylesheet"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Inter:wght@400..800&display=swap" rel="stylesheet">
 
   <!-- Core design system -->
   <link rel="stylesheet" href="assets/css/tailwind.min.css?v=24">
-  <link rel="stylesheet" href="assets/css/style.min.css?v=77">
+  <link rel="stylesheet" href="assets/css/style.min.css?v=84">
 
-  <!-- Preload hero poster -->
+  <link rel="preconnect" href="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev">
   <link rel="preload" as="image" href="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/cover-banner.webp" fetchpriority="high">
 
-  <!-- Vendor Icons -->
   <script defer src="assets/js/vendor/iconify-icon.min.js"></script>
+  <!-- Animation stack, same as services/product-animation.html -->
+  <script defer src="assets/js/vendor/gsap.min.js"></script>
+  <script defer src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="assets/js/vendor/lenis.min.js"></script>
 </head>
 
-<body class="site-page min-h-screen overflow-x-hidden bg-cream text-ink font-sans antialiased selection:bg-brand selection:text-white is-loading">
+<body class="site-page svc-page min-h-screen overflow-x-hidden bg-cream font-sans text-ink antialiased selection:bg-brand selection:text-white is-loading">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2NKBJFV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
@@ -104,10 +122,10 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
   <main id="main">
 
     <!-- ================= 01 HERO ================= -->
-    <section id="services-hero"
-      class="relative flex min-h-[60vh] items-center overflow-hidden bg-[#151210] lg:min-h-[65vh]">
+      <section id="service-hero"
+      class="relative flex min-h-[55vh] items-center overflow-hidden bg-[#151210] lg:min-h-[58vh]">
       <div class="absolute inset-y-0 right-0 w-full lg:w-[64%]">
-        <video class="h-full w-full object-cover opacity-80" muted loop playsinline preload="none" data-hero-video=""
+        <video class="h-full w-full object-cover opacity-80" muted="" loop="" playsinline="" preload="none" data-hero-video=""
           poster="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/cover-banner.webp" aria-hidden="true">
           <source src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/videos/cover-banner.webm" type="video/webm">
         </video>
@@ -115,375 +133,458 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
       <div class="absolute inset-0 bg-[#151210]/45"></div>
       <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(21,18,16,0.92), rgba(21,18,16,0.25) 72%);"></div>
 
-      <div class="relative z-10 mx-auto w-full max-w-[80rem] px-6 pb-12 pt-24 sm:pb-14 sm:pt-28 md:px-8 lg:pb-20 lg:pt-36">
-        <div class="max-w-[58rem]" data-reveal-group="">
-          <p data-reveal="" class="mb-3 text-xs font-semibold uppercase text-[#C93708] sm:mb-4">
-            <span class="pv-mono flex items-center gap-2">
-              <span aria-hidden="true">●</span>
-              Product visualization studio
-            </span>
+      <div class="relative z-10 mx-auto w-full max-w-[80rem] px-6 pb-10 pt-20 sm:pb-12 sm:pt-24 md:px-8 lg:pb-14 lg:pt-28">
+        <div class="max-w-[76rem]" data-reveal-group="">
+          <p data-reveal="" class="mb-3 flex items-center gap-2 text-xs font-semibold uppercase text-[#C93708] sm:mb-4"
+            style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.18em;">
+            <span aria-hidden="true" class="text-[#C93708]">●</span>
+            PRODUCT VISUALIZATION STUDIO
           </p>
 
-          <h1 data-reveal="" class="pv-display text-[2.5rem] text-white md:text-[4.25rem] lg:text-[5rem]"
-            style="line-height:1;letter-spacing:-0.05em;">
-            3D product visualization.<br>
-            One source model.<br>
-            Every deliverable.
+          <h1 data-reveal="" class="svc-hero-h1 text-white"
+            style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;letter-spacing:-0.04em;">
+            <span class="block sm:whitespace-nowrap">3D Product <br class="sm:hidden">Visualization.</span>
+            <span class="block text-white">One Source Model.</span>
+            <span class="block text-white">Every Deliverable.</span>
           </h1>
 
-          <p data-reveal="" class="mt-5 max-w-[43rem] text-sm font-normal leading-6 text-white sm:mt-6 md:text-base md:leading-7">
-            A product CGI studio for brands that sell hardware. Render, film, web viewer and AR all come from one model. Built once. Built right.
+          <p data-reveal="" class="mt-5 max-w-[48rem] text-sm font-normal leading-6 text-white sm:mt-6 md:text-base md:leading-7">
+          A product CGI studio for brands that sell hardware. Render, film, web viewer and AR all come from one model.
+          Built once. Built right.
           </p>
 
           <div data-reveal="" class="mt-6 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <a href="/contact" data-track="hero_cta_click" data-track-label="Send a Brief"
-              class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#C93708] px-7 py-3 text-sm font-semibold text-white outline-none transition hover:bg-[#C93708]/90 focus-visible:ring-2 focus-visible:ring-[#C93708] focus-visible:ring-offset-2 focus-visible:ring-offset-[#151210]">
+           <a href="./#contact" data-track="hero_cta_click" data-track-label="Send a Brief"
+              class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#C93708] px-7 py-3 text-sm font-semibold text-white outline-none transition hover:bg-brandLight focus-visible:ring-2 focus-visible:ring-[#C93708] focus-visible:ring-offset-2 focus-visible:ring-offset-[#110E0C]">
               Send a Brief
-              <iconify-icon icon="solar:arrow-right-up-linear" style="font-size:1rem;"></iconify-icon>
+              <iconify-icon icon="solar:arrow-right-up-linear" aria-hidden="true" style="font-size:1rem;"></iconify-icon>
+            </a>
+            <a href="https://calendly.com/supermajor/15min" target="_blank" rel="noopener noreferrer" data-track="hero_cta_click" data-track-label="Book a Call"
+              class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/40 px-7 py-3 text-sm font-semibold text-white outline-none transition hover:border-white hover:bg-white hover:text-[#151210] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#151210]">
+              Book a Call
+              <iconify-icon icon="solar:calendar-linear" aria-hidden="true" style="font-size:1rem;"></iconify-icon>
             </a>
             <a href="#pipeline" data-track="hero_cta_click" data-track-label="See how one model ships"
-              class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/40 px-7 py-3 text-sm font-semibold text-white outline-none transition hover:border-white hover:bg-white hover:text-[#151210] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#151210]">
+              class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/40 px-7 py-3 text-sm font-semibold text-white outline-none transition hover:border-white hover:bg-white hover:text-[#151210] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#110E0C]">
               See how one model ships
-              <iconify-icon icon="solar:arrow-down-linear" style="font-size:1rem;"></iconify-icon>
+              <iconify-icon icon="solar:arrow-down-linear" aria-hidden="true" style="font-size:1rem;"></iconify-icon>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= 02 SERVICES CARDS ================= -->
-    <section id="services-list" class="bg-[#F5F1EB] py-20 text-[#151210] md:py-28 lg:py-36" aria-labelledby="services-list-title">
+    <!-- ================= 02 SERVICES (sticky media + scrolling list) ================= -->
+    <section id="services-list" data-nav-theme="light" class="bg-cream py-20 text-ink md:py-32 lg:py-36" aria-labelledby="services-title">
       <div class="mx-auto max-w-[80rem] px-6 md:px-8">
-        <div class="mb-12 max-w-[46rem] md:mb-16">
-          <p class="pv-mono mb-4 text-xs font-semibold uppercase text-[#C93708]">Services</p>
-          <h2 id="services-list-title" class="text-[2rem] font-bold leading-none md:text-[3rem] lg:text-[3.5rem]"
-            style="letter-spacing:-0.03em;font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;">
-            3D product visualization services, sorted by the problem you have
-          </h2>
-          <p class="mt-5 text-base leading-7 text-[#100D0B]/70">
+        <div class="flex flex-col justify-between gap-6 pb-10 lg:flex-row lg:items-start">
+          <div class="max-w-3xl">
+            <p class="text-xs font-semibold uppercase text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.18em;">Seven services, one model</p>
+            <h2 data-reveal="" id="services-title" class="mt-4 text-4xl text-ink sm:text-5xl lg:text-6xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1;letter-spacing:-0.04em;">
+              3D Product Visualization Services, <span class="text-[#C93708]">sorted by the problem you have</span>
+            </h2>
+          </div>
+          <p data-reveal="" class="max-w-md text-base leading-7 text-ink/70 lg:mt-8 lg:pt-1">
             Start with what you need to show. Every service below has its own page, and every one is built on the same model.
           </p>
         </div>
 
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-          <!-- Card 1: 3D product rendering -->
-          <article class="group flex flex-col rounded-2xl border border-[#151210]/10 bg-white p-7 transition hover:shadow-lg">
-            <p class="pv-mono mb-3 text-xs font-semibold uppercase text-[#C93708]">01</p>
-            <h3 class="mb-2 text-[1.25rem] font-bold leading-[1.15]"
-              style="font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;letter-spacing:-0.02em;">
-              3D product rendering services
-            </h3>
-            <p class="mb-1 text-sm font-semibold leading-6 text-[#151210]">Launch imagery before the product exists.</p>
-            <p class="mb-6 flex-1 text-sm leading-6 text-[#100D0B]/70">
-              Studio-grade stills from CAD. Every colourway, angle and marketplace crop comes from one model.
-            </p>
-            <a href="services/3d-product-visualization"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-[#C93708] outline-none transition hover:text-[#C93708]/80 focus-visible:ring-2 focus-visible:ring-[#C93708]"
-              data-track="service_card_click" data-track-label="Card: 3D product rendering">
-              See 3D product rendering services
-              <iconify-icon icon="solar:arrow-right-up-linear" style="font-size:1rem;"></iconify-icon>
-            </a>
+        <div class="mt-8 md:mt-12">
+          <!-- 01: image left -->
+          <article data-reveal="" class="grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:items-center lg:gap-16">
+            <figure class="lg:col-span-7">
+              <div class="svc-show__thumb">
+                <img src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/showcase-precision.webp" alt="Photorealistic 3D product render built from a CAD master model" width="1376" height="768" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="mt-3 text-[10px] font-semibold uppercase text-ink/60" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">CAD to 3D render</figcaption>
+            </figure>
+            <div class="lg:col-span-5">
+              <p class="text-xs font-semibold text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;">01</p>
+              <h3 class="mt-4 text-3xl text-ink sm:text-4xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1.02;letter-spacing:-0.035em;">
+                <a href="services/3d-product-visualization" class="outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="service_card_click" data-track-label="Service: 3D product rendering services">3D Product Rendering Services</a>
+              </h3>
+              <p class="mt-6 text-base leading-7 text-ink/70"><strong class="font-semibold text-ink">Launch imagery before the product exists.</strong> Studio-grade stills from CAD. Every colourway, angle and marketplace crop comes from one model.</p>
+              <ul class="mt-6 flex flex-wrap gap-2 sm:gap-2.5" aria-label="Includes"><li class="service-tag-box">Studio stills</li><li class="service-tag-box">From CAD</li><li class="service-tag-box">Colourways</li><li class="service-tag-box">Marketplace crops</li></ul>
+              <a href="services/3d-product-visualization" class="svc-cta mt-8" data-track="service_card_click" data-track-label="Service CTA: 3D product rendering services">
+                See 3D Product Rendering Services <iconify-icon icon="solar:arrow-right-linear" aria-hidden="true"></iconify-icon>
+              </a>
+            </div>
           </article>
-
-          <!-- Card 2: 3D product animation -->
-          <article class="group flex flex-col rounded-2xl border border-[#151210]/10 bg-white p-7 transition hover:shadow-lg">
-            <p class="pv-mono mb-3 text-xs font-semibold uppercase text-[#C93708]">02</p>
-            <h3 class="mb-2 text-[1.25rem] font-bold leading-[1.15]"
-              style="font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;letter-spacing:-0.02em;">
-              3D product animation services
-            </h3>
-            <p class="mb-1 text-sm font-semibold leading-6 text-[#151210]">Show how it works, not just how it looks.</p>
-            <p class="mb-6 flex-1 text-sm leading-6 text-[#100D0B]/70">
-              Launch films and feature animations, cut from the same model as your stills.
-            </p>
-            <a href="services/product-animation"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-[#C93708] outline-none transition hover:text-[#C93708]/80 focus-visible:ring-2 focus-visible:ring-[#C93708]"
-              data-track="service_card_click" data-track-label="Card: 3D product animation">
-              See 3D product animation services
-              <iconify-icon icon="solar:arrow-right-up-linear" style="font-size:1rem;"></iconify-icon>
-            </a>
+          <!-- 02: image right -->
+          <article data-reveal="" class="grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:items-center lg:gap-16 border-t border-ink/10 svc-row--flip">
+            <figure class="lg:col-span-7">
+              <div class="svc-show__thumb">
+                <video data-play-inview="" muted="" loop="" playsinline="" preload="none" poster="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/product-launch.webp" aria-label="Frame from a product launch film of a dark appliance"><source src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/videos/product-launch.webm" type="video/webm"></video>
+              </div>
+              <figcaption class="mt-3 text-[10px] font-semibold uppercase text-ink/60" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">Launch film</figcaption>
+            </figure>
+            <div class="lg:col-span-5">
+              <p class="text-xs font-semibold text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;">02</p>
+              <h3 class="mt-4 text-3xl text-ink sm:text-4xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1.02;letter-spacing:-0.035em;">
+                <a href="services/product-animation" class="outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="service_card_click" data-track-label="Service: 3D product animation services">3D Product Animation Services</a>
+              </h3>
+              <p class="mt-6 text-base leading-7 text-ink/70"><strong class="font-semibold text-ink">Show how it works, not just how it looks.</strong> Launch films and feature animations, cut from the same model as your stills.</p>
+              <ul class="mt-6 flex flex-wrap gap-2 sm:gap-2.5" aria-label="Includes"><li class="service-tag-box">Launch films</li><li class="service-tag-box">Feature animations</li><li class="service-tag-box">Same model as stills</li></ul>
+              <a href="services/product-animation" class="svc-cta mt-8" data-track="service_card_click" data-track-label="Service CTA: 3D product animation services">
+                See 3D product animation services <iconify-icon icon="solar:arrow-right-linear" aria-hidden="true"></iconify-icon>
+              </a>
+            </div>
           </article>
-
-          <!-- Card 3: Exploded view animation -->
-          <article class="group flex flex-col rounded-2xl border border-[#151210]/10 bg-white p-7 transition hover:shadow-lg">
-            <p class="pv-mono mb-3 text-xs font-semibold uppercase text-[#C93708]">03</p>
-            <h3 class="mb-2 text-[1.25rem] font-bold leading-[1.15]"
-              style="font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;letter-spacing:-0.02em;">
-              Exploded view animation
-            </h3>
-            <p class="mb-1 text-sm font-semibold leading-6 text-[#151210]">Open the product up.</p>
-            <p class="mb-6 flex-1 text-sm leading-6 text-[#100D0B]/70">
-              Cutaways, assemblies and internals, built straight from CAD. For the features no camera can reach.
-            </p>
-            <a href="services/exploded-view-animation"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-[#C93708] outline-none transition hover:text-[#C93708]/80 focus-visible:ring-2 focus-visible:ring-[#C93708]"
-              data-track="service_card_click" data-track-label="Card: Exploded view animation">
-              See exploded view animation
-              <iconify-icon icon="solar:arrow-right-up-linear" style="font-size:1rem;"></iconify-icon>
-            </a>
+          <!-- 03: image left -->
+          <article data-reveal="" class="grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:items-center lg:gap-16 border-t border-ink/10">
+            <figure class="lg:col-span-7">
+              <div class="svc-show__thumb">
+                <video data-play-inview="" muted="" loop="" playsinline="" preload="none" poster="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/exploded-cutaway.webp" aria-label="Exploded view of a product opened up to show its internal parts"><source src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/videos/exploded-cutaway.webm" type="video/webm"></video>
+              </div>
+              <figcaption class="mt-3 text-[10px] font-semibold uppercase text-ink/60" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">Cutaway from CAD</figcaption>
+            </figure>
+            <div class="lg:col-span-5">
+              <p class="text-xs font-semibold text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;">03</p>
+              <h3 class="mt-4 text-3xl text-ink sm:text-4xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1.02;letter-spacing:-0.035em;">
+                <a href="services/product-animation" class="outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="service_card_click" data-track-label="Service: Exploded view animation">Exploded View Animation</a>
+              </h3>
+              <p class="mt-6 text-base leading-7 text-ink/70"><strong class="font-semibold text-ink">Open the product up.</strong> Cutaways, assemblies and internals, built straight from CAD. For the features no camera can reach.</p>
+              <ul class="mt-6 flex flex-wrap gap-2 sm:gap-2.5" aria-label="Includes"><li class="service-tag-box">Cutaways</li><li class="service-tag-box">Assemblies</li><li class="service-tag-box">Internals</li><li class="service-tag-box">From CAD</li></ul>
+              <a href="services/product-animation" class="svc-cta mt-8" data-track="service_card_click" data-track-label="Service CTA: Exploded view animation">
+                See exploded view animation <iconify-icon icon="solar:arrow-right-linear" aria-hidden="true"></iconify-icon>
+              </a>
+            </div>
           </article>
-
-          <!-- Card 4: AR product visualization -->
-          <article class="group flex flex-col rounded-2xl border border-[#151210]/10 bg-white p-7 transition hover:shadow-lg">
-            <p class="pv-mono mb-3 text-xs font-semibold uppercase text-[#C93708]">04</p>
-            <h3 class="mb-2 text-[1.25rem] font-bold leading-[1.15]"
-              style="font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;letter-spacing:-0.02em;">
-              AR product visualization
-            </h3>
-            <p class="mb-1 text-sm font-semibold leading-6 text-[#151210]">Let the buyer place it.</p>
-            <p class="mb-6 flex-1 text-sm leading-6 text-[#100D0B]/70">
-              A 3D viewer and an AR view on the product page. Runs in the browser, built on lightweight glTF.
-            </p>
-            <a href="services/ar-vr-experiences"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-[#C93708] outline-none transition hover:text-[#C93708]/80 focus-visible:ring-2 focus-visible:ring-[#C93708]"
-              data-track="service_card_click" data-track-label="Card: AR product visualization">
-              See AR product visualization
-              <iconify-icon icon="solar:arrow-right-up-linear" style="font-size:1rem;"></iconify-icon>
-            </a>
+          <!-- 04: image right -->
+          <article data-reveal="" class="grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:items-center lg:gap-16 border-t border-ink/10 svc-row--flip">
+            <figure class="lg:col-span-7">
+              <div class="svc-show__thumb">
+                <img src="assets/ar-vr/hero-poster.webp" alt="3D product viewer for a website, showing a coffee machine" width="760" height="433" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="mt-3 text-[10px] font-semibold uppercase text-ink/60" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">3D product viewer for website</figcaption>
+            </figure>
+            <div class="lg:col-span-5">
+              <p class="text-xs font-semibold text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;">04</p>
+              <h3 class="mt-4 text-3xl text-ink sm:text-4xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1.02;letter-spacing:-0.035em;">
+                <a href="services/ar-vr-experiences" class="outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="service_card_click" data-track-label="Service: AR product visualization">AR Product Visualization</a>
+              </h3>
+              <p class="mt-6 text-base leading-7 text-ink/70"><strong class="font-semibold text-ink">Let the buyer place it.</strong> A 3D viewer and an AR view on the product page. Runs in the browser, built on lightweight glTF.</p>
+              <ul class="mt-6 flex flex-wrap gap-2 sm:gap-2.5" aria-label="Includes"><li class="service-tag-box">3D viewer</li><li class="service-tag-box">AR view</li><li class="service-tag-box">In the browser</li><li class="service-tag-box">glTF</li></ul>
+              <a href="services/ar-vr-experiences" class="svc-cta mt-8" data-track="service_card_click" data-track-label="Service CTA: AR product visualization">
+                See AR product visualization <iconify-icon icon="solar:arrow-right-linear" aria-hidden="true"></iconify-icon>
+              </a>
+            </div>
           </article>
-
-          <!-- Card 5: 3D product configurator -->
-          <article class="group flex flex-col rounded-2xl border border-[#151210]/10 bg-white p-7 transition hover:shadow-lg">
-            <p class="pv-mono mb-3 text-xs font-semibold uppercase text-[#C93708]">05</p>
-            <h3 class="mb-2 text-[1.25rem] font-bold leading-[1.15]"
-              style="font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;letter-spacing:-0.02em;">
-              3D product configurator development
-            </h3>
-            <p class="mb-1 text-sm font-semibold leading-6 text-[#151210]">Let them build it.</p>
-            <p class="mb-6 flex-1 text-sm leading-6 text-[#100D0B]/70">
-              Colours, materials and options, live on the page. Real-time, in Three.js or Babylon.js, on the same model.
-            </p>
-            <a href="services/ar-vr-experiences"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-[#C93708] outline-none transition hover:text-[#C93708]/80 focus-visible:ring-2 focus-visible:ring-[#C93708]"
-              data-track="service_card_click" data-track-label="Card: 3D product configurator">
-              See 3D configurator development
-              <iconify-icon icon="solar:arrow-right-up-linear" style="font-size:1rem;"></iconify-icon>
-            </a>
+          <!-- 05: image left -->
+          <article data-reveal="" class="grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:items-center lg:gap-16 border-t border-ink/10">
+            <figure class="lg:col-span-7">
+              <div class="svc-show__thumb">
+                <img src="assets/ar-vr/sofa-navy.webp" alt="Demo sofa shown in navy, one of five configurable fabrics" width="1200" height="900" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="mt-3 text-[10px] font-semibold uppercase text-ink/60" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">Demo model, not client work</figcaption>
+            </figure>
+            <div class="lg:col-span-5">
+              <p class="text-xs font-semibold text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;">05</p>
+              <h3 class="mt-4 text-3xl text-ink sm:text-4xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1.02;letter-spacing:-0.035em;">
+                <a href="services/ar-vr-experiences" class="outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="service_card_click" data-track-label="Service: 3D product configurator development">3D Product Configurator Development</a>
+              </h3>
+              <p class="mt-6 text-base leading-7 text-ink/70"><strong class="font-semibold text-ink">Let them build it.</strong> Colours, materials and options, live on the page. Real-time, in Three.js or Babylon.js, on the same model.</p>
+              <ul class="mt-6 flex flex-wrap gap-2 sm:gap-2.5" aria-label="Includes"><li class="service-tag-box">Colours</li><li class="service-tag-box">Materials</li><li class="service-tag-box">Options</li><li class="service-tag-box">Three.js</li><li class="service-tag-box">Babylon.js</li></ul>
+              <a href="services/ar-vr-experiences" class="svc-cta mt-8" data-track="service_card_click" data-track-label="Service CTA: 3D product configurator development">
+                See 3D configurator development <iconify-icon icon="solar:arrow-right-linear" aria-hidden="true"></iconify-icon>
+              </a>
+            </div>
           </article>
-
-          <!-- Card 6: Product websites -->
-          <article class="group flex flex-col rounded-2xl border border-[#151210]/10 bg-white p-7 transition hover:shadow-lg">
-            <p class="pv-mono mb-3 text-xs font-semibold uppercase text-[#C93708]">06</p>
-            <h3 class="mb-2 text-[1.25rem] font-bold leading-[1.15]"
-              style="font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;letter-spacing:-0.02em;">
-              Product websites
-            </h3>
-            <p class="mb-1 text-sm font-semibold leading-6 text-[#151210]">The page that carries the 3D.</p>
-            <p class="mb-6 flex-1 text-sm leading-6 text-[#100D0B]/70">
-              3D product rendering for ecommerce works when the page is built for it. WordPress for lighter builds, React and Next.js for heavier ones.
-            </p>
-            <a href="services/website-design"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-[#C93708] outline-none transition hover:text-[#C93708]/80 focus-visible:ring-2 focus-visible:ring-[#C93708]"
-              data-track="service_card_click" data-track-label="Card: Product websites">
-              See product website development
-              <iconify-icon icon="solar:arrow-right-up-linear" style="font-size:1rem;"></iconify-icon>
-            </a>
+          <!-- 06: image right -->
+          <article data-reveal="" class="grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:items-center lg:gap-16 border-t border-ink/10 svc-row--flip">
+            <figure class="lg:col-span-7">
+              <div class="svc-show__thumb">
+                <img src="assets/web-design/screen-desktop.webp" alt="Super Major service page at desktop width" width="1280" height="800" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="mt-3 text-[10px] font-semibold uppercase text-ink/60" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">WordPress · React · Next.js</figcaption>
+            </figure>
+            <div class="lg:col-span-5">
+              <p class="text-xs font-semibold text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;">06</p>
+              <h3 class="mt-4 text-3xl text-ink sm:text-4xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1.02;letter-spacing:-0.035em;">
+                <a href="services/website-design" class="outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="service_card_click" data-track-label="Service: Product websites">Product Websites</a>
+              </h3>
+              <p class="mt-6 text-base leading-7 text-ink/70"><strong class="font-semibold text-ink">The page that carries the 3D.</strong> 3D product rendering for ecommerce works when the page is built for it. WordPress for lighter builds, React and Next.js for heavier ones.</p>
+              <ul class="mt-6 flex flex-wrap gap-2 sm:gap-2.5" aria-label="Includes"><li class="service-tag-box">WordPress</li><li class="service-tag-box">React</li><li class="service-tag-box">Next.js</li><li class="service-tag-box">Ecommerce</li></ul>
+              <a href="services/website-design" class="svc-cta mt-8" data-track="service_card_click" data-track-label="Service CTA: Product websites">
+                See product website development <iconify-icon icon="solar:arrow-right-linear" aria-hidden="true"></iconify-icon>
+              </a>
+            </div>
           </article>
-
-          <!-- Card 7: Gen AI product content -->
-          <article class="group flex flex-col rounded-2xl border border-[#151210]/10 bg-white p-7 transition hover:shadow-lg sm:col-span-2 lg:col-span-1">
-            <p class="pv-mono mb-3 text-xs font-semibold uppercase text-[#C93708]">07</p>
-            <h3 class="mb-2 text-[1.25rem] font-bold leading-[1.15]"
-              style="font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;letter-spacing:-0.02em;">
-              Gen AI product content
-            </h3>
-            <p class="mb-1 text-sm font-semibold leading-6 text-[#151210]">AI moves the variants. People hold the geometry.</p>
-            <p class="mb-6 flex-1 text-sm leading-6 text-[#100D0B]/70">
-              Scenes, backgrounds and variants explored at speed, around a locked, CAD-accurate model. A person approves every frame.
-            </p>
-            <a href="services/generative-ai"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-[#C93708] outline-none transition hover:text-[#C93708]/80 focus-visible:ring-2 focus-visible:ring-[#C93708]"
-              data-track="service_card_click" data-track-label="Card: Gen AI product content">
-              See Gen AI product content
-              <iconify-icon icon="solar:arrow-right-up-linear" style="font-size:1rem;"></iconify-icon>
-            </a>
+          <!-- 07: image left -->
+          <article data-reveal="" class="grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:items-center lg:gap-16 border-t border-ink/10">
+            <figure class="lg:col-span-7">
+              <div class="svc-show__thumb">
+                <img src="assets/service-media/social-cutdowns.webp" alt="Marketing layouts for one coffee machine campaign" width="960" height="540" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="mt-3 text-[10px] font-semibold uppercase text-ink/60" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">A person approves every frame</figcaption>
+            </figure>
+            <div class="lg:col-span-5">
+              <p class="text-xs font-semibold text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;">07</p>
+              <h3 class="mt-4 text-3xl text-ink sm:text-4xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1.02;letter-spacing:-0.035em;">
+                <a href="services/generative-ai" class="outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="service_card_click" data-track-label="Service: Gen AI product content">Gen AI Product Content</a>
+              </h3>
+              <p class="mt-6 text-base leading-7 text-ink/70"><strong class="font-semibold text-ink">AI moves the variants. People hold the geometry.</strong> Scenes, backgrounds and variants explored at speed, around a locked, CAD-accurate model. A person approves every frame.</p>
+              <ul class="mt-6 flex flex-wrap gap-2 sm:gap-2.5" aria-label="Includes"><li class="service-tag-box">Scenes</li><li class="service-tag-box">Backgrounds</li><li class="service-tag-box">Variants</li><li class="service-tag-box">Person-approved</li></ul>
+              <a href="services/generative-ai" class="svc-cta mt-8" data-track="service_card_click" data-track-label="Service CTA: Gen AI product content">
+                See Gen AI product content <iconify-icon icon="solar:arrow-right-linear" aria-hidden="true"></iconify-icon>
+              </a>
+            </div>
           </article>
-
         </div>
 
-        <p class="mt-10 text-sm leading-6 text-[#100D0B]/70">
-          Not sure which one you need? <a href="/contact" class="font-semibold text-[#C93708] underline underline-offset-4 hover:text-[#C93708]/80" data-track="cta_click" data-track-label="Services: Not sure CTA">Send the product and the problem.</a> We'll tell you which deliverable solves it.
-        </p>
+        <div data-reveal="" class="mt-10 flex flex-col items-start justify-between gap-6 border border-ink/10 bg-[#EDE8DF] p-7 sm:p-9 lg:flex-row lg:items-center">
+          <div>
+            <p class="text-xl font-semibold tracking-tight text-ink sm:text-2xl">Not sure which one you need?</p>
+            <p class="mt-2 text-base leading-7 text-ink/70">Send the product and the problem. We'll tell you which deliverable solves it.</p>
+          </div>
+          <a href="./#contact" data-track="cta_click" data-track-label="Services: Not sure, Send a Brief"
+            class="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-[#C93708] px-7 py-3 text-sm font-semibold text-white outline-none transition hover:bg-brandLight focus-visible:ring-2 focus-visible:ring-[#C93708] focus-visible:ring-offset-2">
+            Send a Brief <iconify-icon icon="solar:arrow-right-up-linear" aria-hidden="true" style="font-size:1rem;"></iconify-icon>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- ================= 03 PIPELINE ================= -->
-    <section id="pipeline" class="bg-[#151210] py-20 text-white md:py-28 lg:py-36" aria-labelledby="pipeline-title">
+    <!-- ================= 03 PROOF (category tabs + swipeable rail) ================= -->
+    <section id="proof" data-nav-theme="dark" class="overflow-hidden border-t border-white/10 bg-[#110E0C] py-20 text-white md:py-32 lg:py-36" aria-labelledby="proof-title">
       <div class="mx-auto max-w-[80rem] px-6 md:px-8">
-        <div class="mb-12 max-w-[46rem] md:mb-16" data-reveal-group="">
-          <p data-reveal="" class="pv-mono mb-4 text-xs font-semibold uppercase text-[#C93708]">One asset</p>
-          <h2 id="pipeline-title" data-reveal="" class="text-[2rem] font-bold leading-none text-white md:text-[3rem] lg:text-[3.5rem]"
-            style="letter-spacing:-0.03em;font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;">
-            One 3D model for render, video and AR
-          </h2>
-          <p data-reveal="" class="mt-5 text-base leading-7 text-white/70">
+        <div class="flex flex-col justify-between gap-6 border-b border-white/10 pb-10 lg:flex-row lg:items-start">
+          <div class="max-w-3xl">
+            <p class="text-xs font-semibold uppercase text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.18em;">Proof</p>
+            <h2 data-reveal="" id="proof-title" class="mt-4 text-4xl text-white sm:text-5xl lg:text-6xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1;letter-spacing:-0.04em;">
+              See what one model becomes
+            </h2>
+          </div>
+          <p data-reveal="" class="max-w-md text-base leading-7 text-white/70 lg:mt-8 lg:pt-1">
+            Same product. Different job. Every frame below was built from a single source model.
+          </p>
+        </div>
+
+        <div data-reveal="" class="svc-controls mt-12 md:mt-14">
+          <div class="svc-arrows">
+            <button type="button" class="svc-arrow" data-rail-prev="" aria-controls="proof-rail" aria-label="Previous"><iconify-icon icon="solar:arrow-left-linear" aria-hidden="true" style="font-size:1.125rem;"></iconify-icon></button>
+            <button type="button" class="svc-arrow" data-rail-next="" aria-controls="proof-rail" aria-label="Next"><iconify-icon icon="solar:arrow-right-linear" aria-hidden="true" style="font-size:1.125rem;"></iconify-icon></button>
+          </div>
+        </div>
+
+        <div data-reveal="" id="proof-rail" data-rail="" class="svc-rail mt-8" tabindex="0" aria-label="Proof gallery, eight examples: scroll sideways for more">
+          <article class="svc-card" data-cat="slot-01">
+            <img src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/styleframe.webp" alt="Super Major demo espresso machine, final CGI render" width="1448" height="1086" loading="lazy" decoding="async">
+            <div class="svc-card__shade"></div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">One model, four outputs<span class="svc-card__meta">Render · film · web viewer · AR</span></h3>
+              <a href="services/3d-product-visualization" class="svc-card__link" data-track="portfolio_click" data-track-label="Proof 01: One model, four outputs">View service <iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></a>
+            </div>
+          </article>
+          <article class="svc-card" data-cat="slot-02">
+            <img src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/animatic.webp" alt="Untextured 3D model of the demo espresso machine, built from CAD" width="1536" height="1024" loading="lazy" decoding="async">
+            <div class="svc-card__shade"></div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Rendering<span class="svc-card__meta">Accuracy from CAD</span></h3>
+              <a href="services/3d-product-visualization" class="svc-card__link" data-track="portfolio_click" data-track-label="Proof 02: Rendering">View service <iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></a>
+            </div>
+          </article>
+          <article class="svc-card" data-cat="slot-03">
+            <video data-play-inview="" muted="" loop="" playsinline="" preload="none" poster="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/product-launch.webp" aria-label="Short muted product film loop"><source src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/videos/product-launch.webm" type="video/webm"></video>
+            <div class="svc-card__shade"></div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Animation<span class="svc-card__meta">Motion from the same asset</span></h3>
+              <a href="services/product-animation" class="svc-card__link" data-track="portfolio_click" data-track-label="Proof 03: Animation">View service <iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></a>
+            </div>
+          </article>
+          <article class="svc-card" data-cat="slot-04">
+            <video data-play-inview="" muted="" loop="" playsinline="" preload="none" poster="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/exploded-cutaway.webp" aria-label="Exploded-view loop opening a product to show its parts"><source src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/videos/exploded-cutaway.webm" type="video/webm"></video>
+            <div class="svc-card__shade"></div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Exploded view<span class="svc-card__meta">Internals shown without a camera</span></h3>
+              <a href="services/product-animation" class="svc-card__link" data-track="portfolio_click" data-track-label="Proof 04: Exploded view">View service <iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></a>
+            </div>
+          </article>
+          <article class="svc-card" data-cat="slot-05">
+            <img src="assets/ar-vr/hero-poster.webp" alt="3D product viewer on a web page" width="760" height="433" loading="lazy" decoding="async">
+            <div class="svc-card__shade"></div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">AR<span class="svc-card__meta">The viewer runs on a product page</span></h3>
+              <a href="services/ar-vr-experiences" class="svc-card__link" data-track="portfolio_click" data-track-label="Proof 05: AR">View service <iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></a>
+            </div>
+          </article>
+          <article class="svc-card" data-cat="slot-06">
+            <img src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/appliances.webp" alt="Studio render of an appliance motor" width="800" height="447" loading="lazy" decoding="async">
+            <div class="svc-card__shade"></div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Electronics &amp; appliances<span class="svc-card__meta">Priority 1 sector · appliance motor, studio still</span></h3>
+              <a href="services/3d-product-visualization" class="svc-card__link" data-track="portfolio_click" data-track-label="Proof 06: Electronics & appliances">View service <iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></a>
+            </div>
+          </article>
+          <article class="svc-card" data-cat="slot-07">
+            <div class="svc-strip" aria-hidden="true"><img src="assets/ar-vr/sofa-champagne.webp" alt="" width="1200" height="900" loading="lazy" decoding="async"><img src="assets/ar-vr/sofa-navy.webp" alt="" width="1200" height="900" loading="lazy" decoding="async"><img src="assets/ar-vr/sofa-gray.webp" alt="" width="1200" height="900" loading="lazy" decoding="async"><img src="assets/ar-vr/sofa-black.webp" alt="" width="1200" height="900" loading="lazy" decoding="async"><img src="assets/ar-vr/sofa-pale-pink.webp" alt="" width="1200" height="900" loading="lazy" decoding="async"></div>
+            <div class="svc-card__shade"></div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Footwear &amp; D2C<span class="svc-card__meta">Priority 2 sector · colourway variants from one model (demo)</span></h3>
+              <a href="services/ar-vr-experiences" class="svc-card__link" data-track="portfolio_click" data-track-label="Proof 07: Footwear & D2C">View service <iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></a>
+            </div>
+          </article>
+          <article class="svc-card" data-cat="slot-08">
+            <video data-play-inview="" muted="" loop="" playsinline="" preload="none" poster="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Starter%20Motor-poster.webp" aria-label="Mitsuba starter motor component animation"><source src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/work/mitsuba/Starter%20Motor.webm" type="video/webm"></video>
+            <div class="svc-card__shade"></div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Industrial<span class="svc-card__meta">Priority 3 sector · Mitsuba India component animation</span></h3>
+              <a href="works/mitsuba-component-visualization" class="svc-card__link" data-track="portfolio_click" data-track-label="Proof 08: Industrial">View case study <iconify-icon icon="lucide:plus" aria-hidden="true"></iconify-icon></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 PIPELINE ================= -->
+    <section id="pipeline" data-nav-theme="light" class="bg-[#EDE8DF] py-20 text-ink md:py-32 lg:py-36" aria-labelledby="pipeline-title">
+      <div class="mx-auto max-w-[80rem] px-6 md:px-8">
+        <div class="flex flex-col justify-between gap-6 border-b border-ink/10 pb-10 lg:flex-row lg:items-start">
+          <div class="max-w-3xl">
+            <p class="text-xs font-semibold uppercase text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.18em;">How one model ships</p>
+            <h2 data-reveal="" id="pipeline-title" class="mt-4 text-4xl text-ink sm:text-5xl lg:text-6xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1;letter-spacing:-0.04em;">
+              One 3D model for render, video and AR
+            </h2>
+          </div>
+          <p data-reveal="" class="max-w-md text-base leading-7 text-ink/70 lg:mt-8 lg:pt-1">
             Most studios rebuild the product for every medium. We build it once, then cut it four ways.
           </p>
         </div>
 
-        <ol class="mt-10 grid gap-0 md:grid-cols-4 md:gap-8 lg:mt-14" aria-label="Four stages of the production pipeline">
-
-          <li data-reveal="" class="border-t border-white/15 py-8 md:border-t-0 md:border-l md:pl-8 md:py-0">
-            <p class="pv-mono mb-3 text-xs font-semibold uppercase text-[#C93708]">01</p>
-            <h3 class="mb-3 text-[1.25rem] font-bold leading-[1.15] text-white"
-              style="font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;letter-spacing:-0.02em;">
-              Model
-            </h3>
-            <p class="text-sm leading-6 text-white/70">
-              CAD or reference in, clean geometry out. Photorealistic product rendering from CAD files starts here. Textures and materials in Substance 3D.
-            </p>
+        <ol class="mt-14 grid gap-8 sm:grid-cols-2 md:mt-20 lg:grid-cols-4" aria-label="Four stages from CAD to every deliverable">
+          <li data-reveal="" class="border-t border-ink/15 pt-8">
+            <p class="text-5xl font-semibold text-[#C93708]" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1;">01</p>
+            <h3 class="mt-6 text-2xl font-semibold tracking-tight">Model</h3>
+            <p class="mt-3 text-base leading-7 text-ink/70">CAD or reference in, clean geometry out. Photorealistic product rendering from CAD files starts here. Textures and materials in Substance 3D.</p>
+            <p class="mt-5 text-[10px] font-semibold uppercase text-ink/60" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">CAD · Substance 3D</p>
           </li>
-
-          <li data-reveal="" class="border-t border-white/15 py-8 md:border-t-0 md:border-l md:pl-8 md:py-0">
-            <p class="pv-mono mb-3 text-xs font-semibold uppercase text-[#C93708]">02</p>
-            <h3 class="mb-3 text-[1.25rem] font-bold leading-[1.15] text-white"
-              style="font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;letter-spacing:-0.02em;">
-              Master
-            </h3>
-            <p class="text-sm leading-6 text-white/70">
-              One hero asset, built once, with levels of detail for broadcast-quality render, web viewer and mobile AR.
-            </p>
+          <li data-reveal="" class="border-t border-ink/15 pt-8">
+            <p class="text-5xl font-semibold text-[#C93708]" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1;">02</p>
+            <h3 class="mt-6 text-2xl font-semibold tracking-tight">Master</h3>
+            <p class="mt-3 text-base leading-7 text-ink/70">One hero asset, built once, with levels of detail for broadcast-quality render, web viewer and mobile AR.</p>
+            <p class="mt-5 text-[10px] font-semibold uppercase text-ink/60" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">Levels of detail</p>
           </li>
-
-          <li data-reveal="" class="border-t border-white/15 py-8 md:border-t-0 md:border-l md:pl-8 md:py-0">
-            <p class="pv-mono mb-3 text-xs font-semibold uppercase text-[#C93708]">03</p>
-            <h3 class="mb-3 text-[1.25rem] font-bold leading-[1.15] text-white"
-              style="font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;letter-spacing:-0.02em;">
-              Shoot
-            </h3>
-            <p class="text-sm leading-6 text-white/70">
-              Stills and film, rendered and finished in Blender and After Effects.
-            </p>
+          <li data-reveal="" class="border-t border-ink/15 pt-8">
+            <p class="text-5xl font-semibold text-[#C93708]" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1;">03</p>
+            <h3 class="mt-6 text-2xl font-semibold tracking-tight">Shoot</h3>
+            <p class="mt-3 text-base leading-7 text-ink/70">Stills and film, rendered and finished in Blender and After Effects.</p>
+            <p class="mt-5 text-[10px] font-semibold uppercase text-ink/60" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">Blender · After Effects</p>
           </li>
-
-          <li data-reveal="" class="border-t border-white/15 py-8 md:border-t-0 md:border-l md:pl-8 md:py-0">
-            <p class="pv-mono mb-3 text-xs font-semibold uppercase text-[#C93708]">04</p>
-            <h3 class="mb-3 text-[1.25rem] font-bold leading-[1.15] text-white"
-              style="font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;letter-spacing:-0.02em;">
-              Ship
-            </h3>
-            <p class="text-sm leading-6 text-white/70">
-              glTF and FBX out to the web viewer, the AR view and the configurator. Same model, no rebuild.
-            </p>
+          <li data-reveal="" class="border-t border-ink/15 pt-8">
+            <p class="text-5xl font-semibold text-[#C93708]" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1;">04</p>
+            <h3 class="mt-6 text-2xl font-semibold tracking-tight">Ship</h3>
+            <p class="mt-3 text-base leading-7 text-ink/70">glTF and FBX out to the web viewer, the AR view and the configurator. Same model, no rebuild.</p>
+            <p class="mt-5 text-[10px] font-semibold uppercase text-ink/60" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">glTF · FBX</p>
           </li>
-
         </ol>
       </div>
     </section>
 
-    <!-- ================= 04 FAQ ================= -->
-    <section id="faq" class="bg-[#F5F1EB] py-20 text-[#151210] md:py-28 lg:py-32" aria-labelledby="faq-title">
+    <!-- ================= 05 FAQ ================= -->
+    <section id="faq" data-nav-theme="light" class="border-t border-ink/10 bg-cream py-20 text-ink md:py-32 lg:py-36" aria-labelledby="faq-title">
       <div class="mx-auto max-w-[80rem] px-6 md:px-8">
-        <p class="pv-mono mb-5 text-xs font-semibold uppercase text-[#C93708]"
-          style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.18em;">
-          QUESTIONS
-        </p>
-        <h2 id="faq-title" class="mb-14 text-[2rem] font-bold leading-none md:mb-20 md:text-[3rem]"
-          style="letter-spacing:-0.025em;font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;">
-          Questions teams ask before they send a brief
-        </h2>
-
-        <div class="border-b border-[#151210]/10">
-
-          <details open class="border-t border-[#151210]/10 py-6 md:py-7">
+        <p class="mb-5 text-xs font-semibold uppercase text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.18em;">Questions</p>
+        <h2 data-reveal="" id="faq-title" class="text-[2.125rem] leading-none md:text-[4.5rem]" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;letter-spacing:-0.025em;">
+              FAQ
+            </h2>
+        <div data-reveal="" class="mt-14 border-b border-ink/10 md:mt-20">
+          <details class="border-t border-ink/10 py-6 md:py-7">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold leading-7 outline-none focus-visible:ring-2 focus-visible:ring-[#C93708]">
               Can you work from CAD files?
-              <iconify-icon icon="lucide:plus" aria-hidden="true" class="shrink-0" style="font-size:1.25rem;"></iconify-icon>
+              <iconify-icon icon="lucide:plus" aria-hidden="true" class="pv-faq-icon shrink-0" style="font-size:1.25rem;"></iconify-icon>
             </summary>
             <p class="mt-4 max-w-[48rem] pr-10 text-sm leading-6 text-[#100D0B]/75">
-              Yes. Send CAD, drawings or reference photos, whatever you have. We reply in writing with what we can build from it.
+              Yes. <a href="./#contact" target="_blank" rel="noopener noreferrer" class="font-semibold text-ink underline decoration-[#C93708] underline-offset-4 outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="faq_link_click" data-track-label="FAQ: Send CAD">Send CAD, drawings or reference photos</a>, whatever you have. We reply in writing with what we can build from it.
             </p>
           </details>
-
-          <details class="border-t border-[#151210]/10 py-6 md:py-7">
+          <details class="border-t border-ink/10 py-6 md:py-7">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold leading-7 outline-none focus-visible:ring-2 focus-visible:ring-[#C93708]">
               Is CGI better than product photography?
-              <iconify-icon icon="lucide:plus" aria-hidden="true" class="shrink-0" style="font-size:1.25rem;"></iconify-icon>
+              <iconify-icon icon="lucide:plus" aria-hidden="true" class="pv-faq-icon shrink-0" style="font-size:1.25rem;"></iconify-icon>
             </summary>
             <p class="mt-4 max-w-[48rem] pr-10 text-sm leading-6 text-[#100D0B]/75">
-              Not always. Photography is simpler for a handful of products in one colourway. 3D wins when colourways, angles and channels multiply, or when the product doesn't exist yet. One model covers all of them.
+              Not always. Photography is simpler for a handful of products in one colourway. <a href="services/3d-product-visualization" target="_blank" rel="noopener noreferrer" class="font-semibold text-ink underline decoration-[#C93708] underline-offset-4 outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="faq_link_click" data-track-label="FAQ: 3D rendering">3D wins when colourways, angles and channels multiply</a>, or when the product doesn't exist yet. One model covers all of them.
             </p>
           </details>
-
-          <details class="border-t border-[#151210]/10 py-6 md:py-7">
+          <details class="border-t border-ink/10 py-6 md:py-7">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold leading-7 outline-none focus-visible:ring-2 focus-visible:ring-[#C93708]">
               Can you make launch visuals before the product is manufactured?
-              <iconify-icon icon="lucide:plus" aria-hidden="true" class="shrink-0" style="font-size:1.25rem;"></iconify-icon>
+              <iconify-icon icon="lucide:plus" aria-hidden="true" class="pv-faq-icon shrink-0" style="font-size:1.25rem;"></iconify-icon>
             </summary>
             <p class="mt-4 max-w-[48rem] pr-10 text-sm leading-6 text-[#100D0B]/75">
-              Yes. A product launch video before the product is manufactured is built from CAD, so no physical sample is needed to start.
+              Yes. A <a href="services/product-animation" target="_blank" rel="noopener noreferrer" class="font-semibold text-ink underline decoration-[#C93708] underline-offset-4 outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="faq_link_click" data-track-label="FAQ: Launch video">product launch video</a> before the product is manufactured is built from CAD, so no physical sample is needed to start.
             </p>
           </details>
-
-          <details class="border-t border-[#151210]/10 py-6 md:py-7">
+          <details class="border-t border-ink/10 py-6 md:py-7">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold leading-7 outline-none focus-visible:ring-2 focus-visible:ring-[#C93708]">
               What do we receive?
-              <iconify-icon icon="lucide:plus" aria-hidden="true" class="shrink-0" style="font-size:1.25rem;"></iconify-icon>
+              <iconify-icon icon="lucide:plus" aria-hidden="true" class="pv-faq-icon shrink-0" style="font-size:1.25rem;"></iconify-icon>
             </summary>
             <p class="mt-4 max-w-[48rem] pr-10 text-sm leading-6 text-[#100D0B]/75">
-              Stills, product films, a web 3D viewer, an AR view, and the optimized glTF and FBX files behind them. Exact deliverables are set in the brief.
+              <a href="services/3d-product-visualization" target="_blank" rel="noopener noreferrer" class="font-semibold text-ink underline decoration-[#C93708] underline-offset-4 outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="faq_link_click" data-track-label="FAQ: Stills">Stills</a>, <a href="services/product-animation" target="_blank" rel="noopener noreferrer" class="font-semibold text-ink underline decoration-[#C93708] underline-offset-4 outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="faq_link_click" data-track-label="FAQ: Product films">product films</a>, <a href="services/ar-vr-experiences" target="_blank" rel="noopener noreferrer" class="font-semibold text-ink underline decoration-[#C93708] underline-offset-4 outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="faq_link_click" data-track-label="FAQ: Viewer and AR">a web 3D viewer, an AR view</a>, and the optimized glTF and FBX files behind them. Exact deliverables are set in the brief.
             </p>
           </details>
-
-          <details class="border-t border-[#151210]/10 py-6 md:py-7">
+          <details class="border-t border-ink/10 py-6 md:py-7">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold leading-7 outline-none focus-visible:ring-2 focus-visible:ring-[#C93708]">
               How does AI fit into the work?
-              <iconify-icon icon="lucide:plus" aria-hidden="true" class="shrink-0" style="font-size:1.25rem;"></iconify-icon>
+              <iconify-icon icon="lucide:plus" aria-hidden="true" class="pv-faq-icon shrink-0" style="font-size:1.25rem;"></iconify-icon>
             </summary>
             <p class="mt-4 max-w-[48rem] pr-10 text-sm leading-6 text-[#100D0B]/75">
-              AI speeds up scene and variant exploration. People hold the geometry and approve every frame. AI can make a picture. It cannot make a decision.
+              <a href="services/generative-ai" target="_blank" rel="noopener noreferrer" class="font-semibold text-ink underline decoration-[#C93708] underline-offset-4 outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="faq_link_click" data-track-label="FAQ: Gen AI">AI speeds up scene and variant exploration</a>. People hold the geometry and approve every frame. AI can make a picture. It cannot make a decision.
             </p>
           </details>
-
-          <details class="border-t border-[#151210]/10 py-6 md:py-7">
+          <details class="border-t border-ink/10 py-6 md:py-7">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold leading-7 outline-none focus-visible:ring-2 focus-visible:ring-[#C93708]">
               How do we start?
-              <iconify-icon icon="lucide:plus" aria-hidden="true" class="shrink-0" style="font-size:1.25rem;"></iconify-icon>
+              <iconify-icon icon="lucide:plus" aria-hidden="true" class="pv-faq-icon shrink-0" style="font-size:1.25rem;"></iconify-icon>
             </summary>
             <p class="mt-4 max-w-[48rem] pr-10 text-sm leading-6 text-[#100D0B]/75">
-              Send a brief: the product, what you need to show, and where it will live. We reply with how we would approach it.
+              <a href="./#contact" target="_blank" rel="noopener noreferrer" class="font-semibold text-ink underline decoration-[#C93708] underline-offset-4 outline-none transition hover:text-brand focus-visible:ring-2 focus-visible:ring-[#C93708]" data-track="faq_link_click" data-track-label="FAQ: Send a brief">Send a brief</a>: the product, what you need to show, and where it will live. We reply with how we would approach it.
             </p>
           </details>
-
         </div>
       </div>
     </section>
 
-    <!-- ================= 05 CLOSING CTA ================= -->
-    <section id="contact-cta" class="bg-[#151210] py-20 text-white md:py-28 lg:py-36" aria-labelledby="cta-title">
-      <div class="mx-auto max-w-[80rem] px-6 md:px-8">
-        <div class="max-w-[46rem]">
-          <p class="pv-mono mb-5 text-xs font-semibold uppercase text-[#C93708]"
-            style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.18em;">
-            GET STARTED
-          </p>
-          <h2 id="cta-title" class="mb-5 text-[2rem] font-bold leading-none text-white md:text-[3rem] lg:text-[3.5rem]"
-            style="letter-spacing:-0.03em;font-family:'Archivo',sans-serif;font-stretch:125%;font-variation-settings:'wdth' 125;">
-            Send the product and the problem.
-          </h2>
-          <p class="mb-8 text-base leading-7 text-white/70">
-            Tell us what you need to show and where it will live. We'll come back with the deliverable that solves it.
-          </p>
-          <div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <a href="/contact"
-              class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#C93708] px-7 py-3 text-sm font-semibold text-white outline-none transition hover:bg-[#C93708]/90 focus-visible:ring-2 focus-visible:ring-[#C93708] focus-visible:ring-offset-2 focus-visible:ring-offset-[#151210]"
-              data-track="cta_click" data-track-label="Closing CTA: Contact Us">
-              Contact Us
-              <iconify-icon icon="solar:arrow-right-up-linear" style="font-size:1rem;"></iconify-icon>
-            </a>
-            <a href="https://calendly.com/supermajor/15min" target="_blank" rel="noopener noreferrer"
-              class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/40 px-7 py-3 text-sm font-semibold text-white outline-none transition hover:border-white hover:bg-white hover:text-[#151210] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#151210]"
-              data-track="cta_click" data-track-label="Closing CTA: Book a Call">
-              Book a Call
-              <iconify-icon icon="solar:calendar-linear" style="font-size:1rem;"></iconify-icon>
-            </a>
-          </div>
-          <p class="mt-10 text-xs font-semibold uppercase tracking-widest text-white/40"
-            style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;">
-            Led by Humans. Scaled by AI.
-          </p>
+    <!-- ================= 06 CLOSING CTA ================= -->
+    <section id="closing-cta" data-nav-theme="dark" class="relative overflow-hidden bg-[#110E0C] py-20 text-white md:py-32 lg:py-36" aria-labelledby="cta-title">
+      <div class="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-brand/10 blur-[160px]" aria-hidden="true"></div>
+      <div class="relative z-10 mx-auto max-w-[80rem] px-6 md:px-8">
+        <div class="grid gap-12 lg:grid-cols-12 lg:items-end lg:gap-12">
+          <div class="lg:col-span-7">
+        <p class="text-xs font-semibold uppercase text-[#C93708]" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.18em;">Start a project</p>
+        <h2 data-reveal="" id="cta-title" class="mt-4 max-w-4xl text-4xl text-white sm:text-6xl lg:text-7xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:0.98;letter-spacing:-0.045em;">
+              Send the product and the problem.
+            </h2>
+        <p data-reveal="" class="mt-6 max-w-xl text-base leading-7 text-white/70">
+          Tell us what you need to show and where it will live. We'll come back with the deliverable that solves it.
+        </p>
+        <div data-reveal="" class="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+          <a href="./#contact" data-track="cta_click" data-track-label="Services closing: Contact Us"
+            class="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#C93708] px-7 py-3 text-sm font-semibold text-white outline-none transition hover:bg-brandLight focus-visible:ring-2 focus-visible:ring-[#C93708] focus-visible:ring-offset-2 focus-visible:ring-offset-[#110E0C]">
+            Contact Us <iconify-icon icon="solar:arrow-right-up-linear" aria-hidden="true" style="font-size:1rem;"></iconify-icon>
+          </a>
+          <a href="mailto:business@supermajor.in" data-track="email_click" data-track-label="business@supermajor.in"
+            class="inline-flex min-h-11 items-center text-sm text-[#FF6A38] outline-none hover:underline focus-visible:ring-2 focus-visible:ring-[#C93708]">
+            business@supermajor.in
+          </a>
         </div>
+        <p data-reveal="" class="mt-8 flex items-center gap-2 text-sm text-white/60">
+          <iconify-icon icon="solar:map-point-linear" aria-hidden="true" class="text-base text-[#FF6A38]"></iconify-icon>
+          Chennai, India · <span id="local-time" class="font-semibold text-white">--:--</span> local time
+        </p>
+        <p data-reveal="" class="mt-3 text-sm text-white/60">Send us a brief and we'll confirm scope and timeline within 24 hours.</p>
+          </div>
+          <figure data-reveal="" class="lg:col-span-5">
+            <div class="relative aspect-video overflow-hidden border border-white/15 bg-[#181412]">
+              <img src="https://pub-29fbff6525d84c4e95d4f3f6b0461ca5.r2.dev/about-studio-bts-opt.webp" alt="Production lighting set up inside the Super Major studio" width="720" height="394" loading="lazy" decoding="async" class="h-full w-full object-cover">
+            </div>
+            <figcaption class="mt-2 text-[10px] font-semibold uppercase text-white/45" style="font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;letter-spacing:0.14em;">Inside the studio, Chennai</figcaption>
+          </figure>
+        </div>
+        <p data-reveal="" class="mt-16 border-t border-white/10 pt-10 text-3xl text-white/90 sm:text-5xl" style="font-family:'Archivo',sans-serif;font-variation-settings:'wdth' 125;font-stretch:125%;font-weight:600;line-height:1;letter-spacing:-0.04em;">
+          Led by Humans. <span class="text-[#C93708]">Scaled by AI.</span>
+        </p>
       </div>
     </section>
 
@@ -492,7 +593,6 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
   <!-- ================= FOOTER (shared component) ================= -->
   <div id="footer-placeholder"></div>
 
-  <!-- Back to top button -->
   <button id="back-to-top"
     class="fixed bottom-6 right-6 z-40 flex size-11 translate-y-4 items-center justify-center rounded-full bg-brand text-white opacity-0 shadow-xl transition-all duration-300 hover:bg-brandLight"
     aria-label="Back to top">
@@ -503,7 +603,7 @@ w.addEventListener('load',function(){if('requestIdleCallback' in w){requestIdleC
   <script defer src="assets/js/page-nav-patch.js?v=4"></script>
   <script defer src="assets/js/page-veil.js"></script>
   <script defer src="assets/js/hero-video.js"></script>
-
+  <script defer src="assets/js/page-services.js?v=2"></script>
 </body>
 
 </html>
