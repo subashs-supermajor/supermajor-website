@@ -3,6 +3,8 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteRule ^works/legal/(.*)$ /legal/$1 [R=301,L]
+  # /services (clean URL) -> services.html at root (directory would take precedence otherwise)
+  RewriteRule ^services/?$ /services.html [L]
   RewriteRule ^services/animation(\.html)?/?$ /services/product-animation [R=301,L]
   RewriteRule ^product-animation(\.html)?/?$ /services/product-animation [R=301,L]
   RewriteRule ^3d-product-visualization(\.html)?/?$ /services/3d-product-visualization [R=301,L]
